@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "Greenapples_45",
+    "password": "null",
     "database": "roommates_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Greenapples_45",
+    "password": "null",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Greenapples_45",
+    "password": "null",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
