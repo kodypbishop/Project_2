@@ -8,16 +8,12 @@ $(document).ready(function() {
   let passwordVerify = $("input#password-verify");
   let ageVerify = $("#verify-age");
 
-  let boxStatus = "unchecked"
+  let boxStatus = false;
 
   // When the status of the checkbox changes, change the boxStatus variable   
   ageVerify.on("change", function(event){
       event.preventDefault();
-      if (boxStatus === "unchecked"){
-          boxStatus = "checked"
-      } else if (boxStatus = "checked") {
-          boxStatus = "unchecked"
-      }
+      boxStatus = !boxStatus;
       console.log(boxStatus);
   })
 
@@ -29,7 +25,7 @@ $(document).ready(function() {
       lastName: lastNameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
-      passwordVerify: passwordVerify.val().trim(),
+      passwordVerify: passwordVerify.val().trim()
     };
 
     // Checks to see if all fields have input
@@ -46,7 +42,7 @@ $(document).ready(function() {
     }
     
     // Checks to see if user is of age
-    if (boxStatus === "unchecked") {
+    if (boxStatus === false) {
         handleUnderEighteen();
         return;
     };
