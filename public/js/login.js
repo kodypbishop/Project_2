@@ -1,13 +1,13 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
-  var loginForm = $("form.login");
-  var emailInput = $("input#email-input");
-  var passwordInput = $("input#password-input");
+  let loginForm = $("form.login");
+  let emailInput = $("input#email-input");
+  let passwordInput = $("input#password-input");
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
     event.preventDefault();
-    var userData = {
+    let userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
@@ -32,8 +32,10 @@ $(document).ready(function() {
         window.location.replace("/members");
         // If there's an error, log the error
       })
-      .catch(function(err) {
-        console.log(err);
+    //   .catch(function(err) {
+      .catch(function() {
+        $("#alert .msg").text("The email and/or password you've entered is incorrect");
+        $("#alert").fadeIn(500);
       });
   }
 });
