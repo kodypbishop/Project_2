@@ -1,8 +1,8 @@
 module.exports = function (sequelize, DataTypes) {
     var reviews = sequelize.define('reviews', {
-        ID: DataTypes.STRING,
+    
         Stars_ID: DataTypes.STRING,
-        roommatesId: DataTypes.STRING
+        review: DataTypes.TEXT
 
     })
     reviews.associate = function (models) {
@@ -15,5 +15,6 @@ module.exports = function (sequelize, DataTypes) {
         });
     };
 
-    return Post;
+    return reviews;
+    console.log(reviews);
 };
