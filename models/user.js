@@ -14,10 +14,9 @@ module.exports = function (sequelize, DataTypes) {
     },
     gender: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     pets: {
-      type: DataTypes.bouillon,
+      type: DataTypes.boolean,
     },
     email: {
       type: DataTypes.STRING,
