@@ -74,9 +74,11 @@ h1 {
   left: 0;
   position: fixed !important;
 }
+
 .pure-input-1-2 {
   text-align: center;
   color: #111;
+  border-radius: 100px;
 }
 
 .splash {
@@ -128,6 +130,10 @@ h1 {
   top: 50px; left: 0; bottom: 0; right: 0;
   text-align: center;
   background-color: white;
+}
+
+.container-2 {
+  background-color: transparent;
 }
 
 
