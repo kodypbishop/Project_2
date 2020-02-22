@@ -204,13 +204,13 @@ h1 {
   }
   .home-menu .pure-button {
     width: auto;
+    margin-right: 200px;
   }
   .home-menu .pure-input-rounded {
     width: 80%;
-    margin-right: auto;
   }
   .pure-menu .pure-menu-link-1 {
-    margin-left: auto;
+    margin-left: 200px;
   }
 
   /* We decrease the width of the .splash, since we have more width
@@ -232,10 +232,10 @@ h1 {
 
   .home-menu .pure-button {
     width: auto;
+    margin-right: 100px;
   }
   .home-menu .pure-input-rounded {
-    width: auto;
-    margin-right: auto;
+    width: 80%;
   }
   .pure-menu .pure-menu-link-1 {
     margin-left: 100px;
@@ -250,26 +250,26 @@ h1 {
   
   .home-menu .pure-button {
     width: auto;
+    margin-right: 200px;
   }
   .home-menu .pure-input-rounded {
     width: 80%;
-    margin-right: auto;
   }
   .pure-menu .pure-menu-link-1 {
     margin-left: 200px;
   }
 }
 
-@media screen and (min-width: 84em) {
+@media screen and (min-width: 90em) {
   .home-menu .pure-button {
     width: auto;
+    margin-right: 200px;
   }
   .home-menu .pure-input-rounded {
     width: 80%;
-    margin-right: auto;
   }
   .pure-menu .pure-menu-link-1 {
-    margin-left: 300px;
+    margin-left: 400px;
   }
 }
 
