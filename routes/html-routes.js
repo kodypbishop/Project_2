@@ -33,4 +33,8 @@ module.exports = function(app) {
       res.render("profile");
   })
 
+  app.get("/rating", isAuthenticated, (req, res) => {
+      res.render("rating");
+  })
+
 };
