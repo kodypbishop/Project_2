@@ -58,12 +58,17 @@ module.exports = function (app) {
       })
     }
   })
+
   app.get("/profile", isAuthenticated, (req, res) => {
     res.render("profile");
   })
 
   app.get("/rating", isAuthenticated, (req, res) => {
-      res.render("rating");
+    res.render("rating");
   })
 
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> 274c2ac4c745a2aa40cd9647dab4e1ed6bf9fd5b

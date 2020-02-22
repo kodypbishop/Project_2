@@ -2,17 +2,19 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="#">Rate Your Roommate</a>
-            <!-- Placeholder for Review input using handlebars-->
-            <label for="reviews">Reviews</label>
-            <form input="reviews" placeholder="Leave a Review" value="review"></form>
-
-
-
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><form class="pure-form">
+                        <input type="text" class="pure-input-rounded">
+                        <button type="submit" class="pure-button">Search</button>
+                        </form></li>
+                    <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate a Roommate</a></li>
+                    <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
+                    <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     <br><br>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -20,7 +20,7 @@ body {
   padding: 10px;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
   background-color: white;
-  float: left;
+  float: right;
 }
 
 .home-menu .pure-menu-heading {
@@ -34,12 +34,8 @@ body {
 .home-menu .pure-button {
   background-color: cornflowerblue;
   color: white;
-  margin-right: 200px
 }
 
-.home-menu .pure-input-rounded {
-  width: 400px;
-}
 
 .home-menu .pure-menu-selected a {
   color: gainsboro;
@@ -130,8 +126,6 @@ h1 {
   background-color: white;
 }
 
-
-
 /*
 * -- MOBILE (AND UP) MEDIA QUERIES --
 * On tablets and other medium-sized devices, we want to customize some
@@ -145,6 +139,7 @@ h1 {
 
   .home-menu .pure-menu-heading {
       font-size: 1.5em;
+      float: left;
   }
 
   .container {
@@ -161,9 +156,14 @@ h1 {
       padding: .25em;
   }
 
-  .pure-button {
-      margin: 10px auto;
+  .home-menu .pure-menu-link {
+    float: right;
   }
+  
+  .home-menu .pure-input-rounded {
+    width: 50%;
+    margin-left: 10px;
+  }  
 
 }
 
@@ -196,6 +196,16 @@ h1 {
   .home-menu ul {
       float: right;
   }
+  .home-menu .pure-button {
+    width: auto;
+  }
+  .home-menu .pure-input-rounded {
+    width: 80%;
+    margin-right: auto;
+  }
+  .pure-menu .pure-menu-link-1 {
+    margin-left: auto;
+  }
 
   /* We decrease the width of the .splash, since we have more width
   to work with */
@@ -214,17 +224,46 @@ h1 {
       border: none;
   }
 
+  .home-menu .pure-button {
+    width: auto;
+  }
+  .home-menu .pure-input-rounded {
+    width: auto;
+    margin-right: auto;
+  }
+  .pure-menu .pure-menu-link-1 {
+    margin-left: 100px;
+  }
+
 }
-
-
-/*
-* -- DESKTOP (AND UP) MEDIA QUERIES --
-* On desktops and other large devices, we want to over-ride some
-* of the mobile and tablet styles.
-*/
 @media screen and (min-width: 78em) {
   /* We increase the header font size even more */
   .splash-head {
       font-size: 300%;
   }
+  
+  .home-menu .pure-button {
+    width: auto;
+  }
+  .home-menu .pure-input-rounded {
+    width: 80%;
+    margin-right: auto;
+  }
+  .pure-menu .pure-menu-link-1 {
+    margin-left: 200px;
+  }
 }
+
+@media screen and (min-width: 84em) {
+  .home-menu .pure-button {
+    width: auto;
+  }
+  .home-menu .pure-input-rounded {
+    width: 80%;
+    margin-right: auto;
+  }
+  .pure-menu .pure-menu-link-1 {
+    margin-left: 300px;
+  }
+}
+
