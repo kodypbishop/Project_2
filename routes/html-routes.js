@@ -29,4 +29,8 @@ module.exports = function(app) {
     res.render("members");
   });
 
+  app.get("/profile", isAuthenticated, (req, res) => {
+      res.render("profile");
+  })
+
 };
