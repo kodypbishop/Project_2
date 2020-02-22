@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS roommatedb;
+DROP DATABASE IF EXISTS roommates_db;
 -- Drops the databse if it already exists 
-CREATE DATABASE roommatedb; 
+CREATE DATABASE roommates_db; 
 -- Creates the DATABASE 
 
 --create table for roommates with a foreign id to link to stars 
