@@ -23,7 +23,7 @@ module.exports = function (app) {
     res.render("login");
   });
 
- 
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function (req, res) {
@@ -42,9 +42,9 @@ module.exports = function (app) {
         where: {
           email: req.body.email
         }
-      }).then(function(data) {
+      }).then(function (data) {
         console.log(data)
-        res.render("search",data)
+        res.render("search", data)
       })
     } else {
       db.User.findAll({
@@ -52,11 +52,14 @@ module.exports = function (app) {
           firstName: req.body.firstName,
           lastName: req.body.lastName
         }
-      }).then(function(data){
+      }).then(function (data) {
         console.log(data)
-        res.render("search",data)
+        res.render("search", data)
       })
     }
   })
+  app.get("/profile", isAuthenticated, (req, res) => {
+    res.render("profile");
+  })
 
-};
+}
