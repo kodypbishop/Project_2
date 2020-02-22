@@ -129,6 +129,10 @@ h1 {
   text-align: center;
   background-color: white;
 }
+.home-menu .pure-input-rounded {
+  width: 50%;
+  color: #111;
+}  
 
 
 
@@ -166,6 +170,7 @@ h1 {
   
   .home-menu .pure-input-rounded {
     width: 50%;
+    color: #111;
   }  
 
   .home-menu .pure-menu-link-1 {
