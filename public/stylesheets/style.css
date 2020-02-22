@@ -13,6 +13,7 @@ body {
     line-height: 1.7em;
     font-size: 13px;
     background: url(./images/bike-665925_1920.jpg);
+    color: white;
 }
 
 .home-menu {
@@ -106,6 +107,19 @@ h1 {
   height: auto;
   text-align: center;
 }
+
+.container {
+  text-align: center;
+  color: #3c3c3c;
+  width: 40%;
+  height: 60%;
+  margin: auto;
+  position: absolute;
+  top: 50px; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  background-color: white;
+}
+
 
 
 /*
