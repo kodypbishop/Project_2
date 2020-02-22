@@ -91,6 +91,25 @@ h1 {
   color: white;
   text-shadow: 2px 2px 5px #3c3c3c;
 }
+.splash-head-1 {
+  text-align: left;
+}
+.splash-container-1 {
+  z-index: 1;
+  /* The following styles are required for the "scroll-over" effect */
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+
+}
+
+.pure-g-1-5 {
+  text-align: left;
+  text-shadow: 2px 2px 5px #3c3c3c;
+}
+
 .pure-button {
   margin: 10px;
   color: white;
