@@ -31,6 +31,16 @@ body {
   float: left;
 }
 
+.home-menu .pure-button {
+  background-color: cornflowerblue;
+  color: white;
+  margin-right: 200px
+}
+
+.home-menu .pure-input-rounded {
+  width: 400px;
+}
+
 .home-menu .pure-menu-selected a {
   color: gainsboro;
 }

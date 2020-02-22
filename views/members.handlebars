@@ -6,7 +6,10 @@
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
             <a class="pure-menu-heading" href="#">Rate Your Roommate</a>
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="/search" class="pure-menu-link">Search Ratings</a></li>
+                    <li class="pure-menu-item"><form class="pure-form">
+                        <input type="text" class="pure-input-rounded">
+                        <button type="submit" class="pure-button">Search</button>
+                        </form></li>
                     <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate a Roommate</a></li>
                     <li class="pure-menu-item"><a href="/members" class="pure-menu-link">Profile</a></li>
                     <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
@@ -22,7 +25,6 @@
             What do you want to do?
         </p>
         <p>
-            <a href="search.handlebars" class="pure-button pure-button-primary">Search Ratings </a>
             <a href="rating.handlebars" class="pure-button pure-button-primary">Rate a Roommate</a>
             <a href="members.handlebars" class="pure-button pure-button-primary">Profile</a>
         </p>
