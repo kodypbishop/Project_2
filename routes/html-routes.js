@@ -67,8 +67,4 @@ module.exports = function (app) {
     res.render("rating");
   })
 
-<<<<<<< HEAD
-};
-=======
 }
->>>>>>> 274c2ac4c745a2aa40cd9647dab4e1ed6bf9fd5b

@@ -139,7 +139,7 @@ h1 {
 
   .home-menu .pure-menu-heading {
       font-size: 1.5em;
-      float: left;
+      float: left;;
   }
 
   .container {
@@ -152,9 +152,7 @@ h1 {
       box-sizing: border-box;
   }
 
-  .pure-menu-link {
-      padding: .25em;
-  }
+  
 
   .home-menu .pure-menu-link {
     float: right;
@@ -162,8 +160,15 @@ h1 {
   
   .home-menu .pure-input-rounded {
     width: 50%;
-    margin-left: 10px;
   }  
+
+  .home-menu .pure-menu-link-1 {
+    margin-left: 30px;
+  }
+
+  .home-menu .pure-button {
+    width: auto;
+  }
 
 }
 
@@ -198,13 +203,12 @@ h1 {
   }
   .home-menu .pure-button {
     width: auto;
-    margin-right: 200px;
   }
   .home-menu .pure-input-rounded {
     width: 80%;
   }
   .pure-menu .pure-menu-link-1 {
-    margin-left: 200px;
+    margin-left: 0;
   }
 
   /* We decrease the width of the .splash, since we have more width
