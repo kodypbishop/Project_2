@@ -67,4 +67,8 @@ module.exports = function (app) {
     res.render("rating");
   })
 
+  app.get("/reviews", isAuthenticated, (req, res) => {
+    res.render("reviews");
+  })
+
 }

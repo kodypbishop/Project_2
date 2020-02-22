@@ -57,4 +57,12 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/review_data", (req, res) => {
+    res.json({
+        stars: req.reviews.firstName,
+        review: req.reviews.review,
+        id: req.reviews.id
+      });
+  });
 };
