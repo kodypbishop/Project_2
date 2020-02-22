@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Jang0f3tt",
+    "password": "rootroot",
     "database": "roommates_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
