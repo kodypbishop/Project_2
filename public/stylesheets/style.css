@@ -74,6 +74,10 @@ h1 {
   left: 0;
   position: fixed !important;
 }
+.pure-input-1-2 {
+  text-align: center;
+  color: #111;
+}
 
 .splash {
   /* absolute center .splash within .splash-container */
@@ -125,6 +129,8 @@ h1 {
   text-align: center;
   background-color: white;
 }
+
+
 
 /*
 * -- MOBILE (AND UP) MEDIA QUERIES --
