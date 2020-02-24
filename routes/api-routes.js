@@ -69,21 +69,43 @@ module.exports = function(app) {
           email: req.body.email
         }
       }).then(function (data) {
-        console.log(data)
         data = data.JSON.stringify(data)
         res.redirect(301, '/search'+data)
       })
+    } if (req.body.firstName && req.body.lastName){
+      db.User.findAll({
+        where: {
+          firstName: req.body.firstName,
+          lastName: req.body.lastName
+        }
+      }).then(function (data) {
+        let send = ""
+        data.forEach(element => {
+          send += element.dataValues.id + ","
+        });
+        res.send('/search/'+send);
+      })
+
     } else {
       db.User.findAll({
         where: {
           firstName: req.body.firstName
         }
       }).then(function (data) {
-        console.log(data[0].dataValues)
-        data = "test"
-        res.send('/search/'+data);
+        let send = ""
+        data.forEach(element => {
+          send += element.dataValues.id + ","
+        });
+        res.send('/search/'+send);
       })
     }
   })
 
+  app.get("/api/review_data", (req, res) => {
+    res.json({
+        stars: req.reviews.firstName,
+        review: req.reviews.review,
+        id: req.reviews.id
+      });
+  });
 };
