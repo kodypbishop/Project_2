@@ -25,5 +25,24 @@
         </div>
     </div>
 
-        <h1>response</h1>
+
     <br><br>
+        <h1>response</h1>
+        <ul>
+  {{#each person}}
+   
+	{{name}}
+
+	<button data-id="{{id}}">
+		Leave review
+	</button>
+
+	<button data-id="{{id}}">
+		read reviews
+	</button>
+  {{/each}}
+</ul>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>

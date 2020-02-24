@@ -34,29 +34,33 @@ module.exports = function (app) {
     res.render("advancedsearch");
   });
 
-  app.post("/search", isAuthenticated, function (req, res) {
-    console.log("HERE")
-    console.log(req.body)
-    if (req.body.email) {
-      db.User.findAll({
-        where: {
-          email: req.body.email
-        }
-      }).then(function (data) {
-        console.log(data)
-        res.render("search", data)
-      })
-    } else {
-      db.User.findAll({
-        where: {
-          firstName: req.body.firstName,
-          lastName: req.body.lastName
-        }
-      }).then(function (data) {
-        console.log(data)
-        res.render("search", data)
-      })
+  app.get("/search/:data", isAuthenticated, function (req, res) {
+    console.log(req.params.data)
+    id = req.params.data.split(",")
+    id.pop()
+    for(let i=0; i<id.length;i++){
+     id[i] = + id[i];
     }
+    console.log(id)
+
+    db.User.findAll({
+      where: {
+        id : id
+      }
+    }).then(function (data) {
+      let send = []
+      data.forEach(element => {
+        console.log(element.dataValues)
+       let person ={
+         id:element.dataValues.id,
+         name : element.dataValues.firstName + " " + element.dataValues.lastName,
+
+       };
+        send.push(person)
+      });
+      console.log(send)
+      res.render("search",{person:send});
+    })
   })
 
   app.get("/profile", isAuthenticated, (req, res) => {
