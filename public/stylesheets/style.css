@@ -201,8 +201,8 @@ h1 {
   }   
 
   .home-menu .pure-menu-heading {
-      font-size: 1.5em;
-      float: left;;
+      font-size: 1em;
+      float: left;
   }
 
   #login-container {
@@ -215,20 +215,15 @@ h1 {
       box-sizing: border-box;
   }
 
-  .home-menu .pure-menu-link {
-    float: right;
-  }
-  
   .home-menu .pure-input-rounded {
-    width: 50%;
-    color: #111;
+    width: 70%;
+    color: white;
+    float: left;
   }  
 
-  .home-menu .pure-button {
-    width: auto;
-  }
 
 }
+
 
 
 /*
@@ -285,17 +280,18 @@ h1 {
   }
   
 }
-@media screen and (min-width: 78em) {
+@media screen and (min-width: 84em) {
   /* We increase the header font size even more */
   .splash-head {
       font-size: 300%;
   }
+  .home-menu .pure-input-rounded {
+    width: 60%;
+  }
+
   .home-menu .pure-button {
     width: auto;
-    margin-right: 200px;
-  }
-  .home-menu .pure-input-rounded {
-    width: 80%;
+    margin-right: 400px;
   }
  
 }
@@ -304,6 +300,11 @@ h1 {
 
   .home-menu .pure-input-rounded {
     width: 60%;
+  }
+
+  .home-menu .pure-button {
+    width: auto;
+    margin-right: 700px;
   }
 }
 
