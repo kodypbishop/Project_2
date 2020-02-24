@@ -12,9 +12,9 @@
 h2 {
   margin-top: 100px;
 }
-h3 {
+/* h3 {
   margin-top: 50px;
-}
+} */
 
 * {
     -webkit-box-sizing: border-box;
@@ -29,7 +29,7 @@ body {
     color: white;
 }
 
-#email-input, #password-input{
+#first-name, #last-name, #email-input, #password-input, #password-verify{
     margin: auto;
 }
 
@@ -205,8 +205,9 @@ h1 {
       float: left;
   }
 
-  #login-container {
+  #login-container, #signup-container {
       margin-top: 20px;
+      min-width: 75%;
   }
 
   .pure-u-1-3 {
