@@ -75,7 +75,7 @@ h1 {
   position: fixed !important;
 }
 
-.pure-input-1-2 {
+.pure-input-1 {
   text-align: center;
   color: #111;
 }
@@ -84,8 +84,8 @@ h1 {
   /* absolute center .splash within .splash-container */
   width: 80%;
   margin: auto;
-  position: absolute;
-  top: 500px; left: 0; bottom: 0; right: 0;
+  position: fixed;
+  top: 200px; left: 0; bottom: 0; right: 0;
   text-align: center;
   text-transform: uppercase;
   color: white;

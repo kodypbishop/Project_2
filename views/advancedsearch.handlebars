@@ -1,29 +1,41 @@
 <title>Search Ratings</title>
 </head>
+
 <body>
- <div class="header">
+    <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="#">Rate Your Roommate</a>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="search.handlebars" class="pure-menu-link">Search Ratings</a></li>
-                    <li class="pure-menu-item"><a href="profile.handlebars" class="pure-menu-link">Profile</a></li>
-                    <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
-                </ul>
-            </div>
+            <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <form class="pure-form">
+                        <input type="text" class="pure-input-rounded">
+                        <button type="submit" class="pure-button">Search</button>
+                    </form>
+                </li>
+                <li class="pure-menu-item"><a href="/profile" class="pure-menu-link-1">Profile</a></li>
+                <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+            </ul>
         </div>
+    </div>
 
     <br><br>
-    
-    <form>
-        <input type="email" id="email">
-        <button type="button" id="submitEmail">submit</button>
-    </form>
-    <form>
-        <input type="text" id="firstName">
-        <input type="text" id="lastName">
-        <button type="button" id="submitName">submit</button>
-    </form>
 
-    
+    <div class="splash-container">
+        <div class="splash">
+            <h1 class="splash-head">Search By </h1>
+            <form>
+                <input type="email" id="email">
+                <button type="button" id="submitEmail">submit</button>
+            </form>
+            <form>
+                <input type="text" id="firstName">
+                <input type="text" id="lastName">
+                <button type="button" id="submitName">submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/advancedsearch.js"></script>
