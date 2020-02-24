@@ -1,5 +1,14 @@
-form.signup,
+form.signup {
+  margin-top: 40px;
+}
 form.login {
+  margin-top: 60px;
+}
+
+h2 {
+  margin-top: 100px;
+}
+h3 {
   margin-top: 50px;
 }
 
@@ -81,7 +90,6 @@ h1 {
   position: fixed;
   top: 200px; left: 0; bottom: 0; right: 0;
   text-align: center;
-  text-transform: uppercase;
   color: white;
   text-shadow: 2px 2px 5px #3c3c3c;
 }
@@ -191,14 +199,11 @@ h1 {
     color: #111;
   }  
 
-  
-
   .home-menu .pure-button {
     width: auto;
   }
 
 }
-
 
 
 /*
@@ -228,14 +233,11 @@ h1 {
   .home-menu ul {
       float: right;
   }
-  .home-menu .pure-button {
-    width: auto;
-  }
+  
   .home-menu .pure-input-rounded {
     width: 80%;
   }
   
-
   /* We decrease the width of the .splash, since we have more width
   to work with */
   .splash {
@@ -253,22 +255,16 @@ h1 {
       border: none;
   }
 
-  .home-menu .pure-button {
-    width: auto;
-    margin-right: 100px;
-  }
   .home-menu .pure-input-rounded {
     width: 80%;
   }
   
-
 }
 @media screen and (min-width: 78em) {
   /* We increase the header font size even more */
   .splash-head {
       font-size: 300%;
   }
-  
   .home-menu .pure-button {
     width: auto;
     margin-right: 200px;
@@ -280,10 +276,7 @@ h1 {
 }
 
 @media screen and (min-width: 86em) {
-  .home-menu .pure-button {
-    width: auto;
-    margin-right: 600px;
-  }
+
   .home-menu .pure-input-rounded {
     width: 60%;
   }
