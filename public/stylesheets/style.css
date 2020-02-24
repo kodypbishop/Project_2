@@ -31,10 +31,6 @@ body {
   float: left;
 }
 
-.home-menu .pure-button {
-  background-color: cornflowerblue;
-  color: white;
-}
 
 .home-menu .pure-menu-selected a {
   color: gainsboro;
@@ -110,7 +106,6 @@ h1 {
 
 .pure-button {
   margin: 10px;
-  background-color: cornflowerblue;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 4px;
 }
