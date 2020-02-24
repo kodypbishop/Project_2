@@ -34,29 +34,9 @@ module.exports = function (app) {
     res.render("advancedsearch");
   });
 
-  app.post("/search", isAuthenticated, function (req, res) {
-    console.log("HERE")
-    console.log(req.body)
-    if (req.body.email) {
-      db.User.findAll({
-        where: {
-          email: req.body.email
-        }
-      }).then(function (data) {
-        console.log(data)
-        res.render("search", data)
-      })
-    } else {
-      db.User.findAll({
-        where: {
-          firstName: req.body.firstName,
-          lastName: req.body.lastName
-        }
-      }).then(function (data) {
-        console.log(data)
-        res.render("search", data)
-      })
-    }
+  app.get("/search/:data", isAuthenticated, function (req, res) {
+    console.log(req.params.data)
+    res.render("search")
   })
 
   app.get("/profile", isAuthenticated, (req, res) => {
@@ -67,8 +47,4 @@ module.exports = function (app) {
     res.render("rating");
   })
 
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> 274c2ac4c745a2aa40cd9647dab4e1ed6bf9fd5b

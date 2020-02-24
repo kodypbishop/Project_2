@@ -5,10 +5,9 @@ $(document).ready(function() {
         $.ajax({
             url: "/search",
             type:"POST",
-            data: {email:$("#email").val()},
+            data: {firstName:$("#email").val()},
             success: function(res) {
-                console.log(res);
-                alert(res)
+                window.location.pathname = res
             }
           })
         })

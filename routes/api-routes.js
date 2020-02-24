@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 let db = require("../models");
 let passport = require("../config/passport");
+let isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -57,4 +58,32 @@ module.exports = function(app) {
       });
     }
   });
+
+  
+  app.post("/search", isAuthenticated, function (req, res) {
+    console.log("HERE")
+    console.log(req.body)
+    if (req.body.email) {
+      db.User.findAll({
+        where: {
+          email: req.body.email
+        }
+      }).then(function (data) {
+        console.log(data)
+        data = data.JSON.stringify(data)
+        res.redirect(301, '/search'+data)
+      })
+    } else {
+      db.User.findAll({
+        where: {
+          firstName: req.body.firstName
+        }
+      }).then(function (data) {
+        console.log(data[0].dataValues)
+        data = "test"
+        res.send('/search/'+data);
+      })
+    }
+  })
+
 };
