@@ -1,8 +1,12 @@
-form.signup {
+/* form.signup {
   margin-top: 40px;
-}
-form.login {
+} */
+/* form.login {
   margin-top: 60px;
+} */
+
+.form-group {
+    margin-bottom: 8px;
 }
 
 h2 {
@@ -23,6 +27,10 @@ body {
     font-size: 13px;
     background: url(./images/bike-665925_1920.jpg);
     color: white;
+}
+
+#email-input, #password-input{
+    margin: auto;
 }
 
 .home-menu {
@@ -148,17 +156,34 @@ h1 {
   text-align: center;
 }
 
-.container {
+#login-container {
   text-align: center;
   color: #3c3c3c;
   width: 40%;
   height: 60%;
   margin: auto;
+  margin-top: 50px;
   position: absolute;
   top: 50px; left: 0; bottom: 0; right: 0;
   text-align: center;
   background-color: white;
+  border-radius: 10px;
 }
+
+#signup-container {
+    text-align: center;
+    color: #3c3c3c;
+    width: 40%;
+    height: 75%;
+    margin: auto;
+    margin-top: 50px;
+    position: absolute;
+    top: 50px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+  }
+
 .home-menu .pure-input-rounded {
   width: 50%;
   color: #111;
@@ -180,7 +205,7 @@ h1 {
       float: left;;
   }
 
-  .container {
+  #login-container {
       margin-top: 20px;
   }
 
