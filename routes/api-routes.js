@@ -69,9 +69,12 @@ module.exports = function(app) {
           email: req.body.email
         }
       }).then(function (data) {
-        data = data.JSON.stringify(data)
-        res.redirect(301, '/search'+data)
-      })
+        let send = ""
+        data.forEach(element => {
+          send += element.dataValues.id + ","
+        });
+        res.send('/search/'+send);
+      });
     } if (req.body.firstName && req.body.lastName){
       db.User.findAll({
         where: {
@@ -90,6 +93,54 @@ module.exports = function(app) {
       db.User.findAll({
         where: {
           firstName: req.body.firstName
+        }
+      }).then(function (data) {
+        let send = ""
+        data.forEach(element => {
+          send += element.dataValues.id + ","
+        });
+        res.send('/search/'+send);
+      })
+    }
+  })
+
+  app.post("/api/searchbar", isAuthenticated, function (req, res) {
+    console.log("HERE")
+    console.log(req.body)
+
+    if (req.body.search.trim().indexOf("@")>-1) {
+      db.User.findAll({
+        where: {
+          email: req.body.search.trim()
+        }
+      }).then(function (data) {
+        let send = ""
+        data.forEach(element => {
+          send += element.dataValues.id + ","
+        });
+        res.send('/search/'+send);
+      });
+
+
+    } if (req.body.search.trim().indexOf(" ")>-1){
+      let name = req.body.search.trim().split(" ")
+      db.User.findAll({
+        where: {
+          firstName: name[0],
+          lastName: name[1]
+        }
+      }).then(function (data) {
+        let send = ""
+        data.forEach(element => {
+          send += element.dataValues.id + ","
+        });
+        res.send('/search/'+send);
+      })
+
+    } else {
+      db.User.findAll({
+        where: {
+          firstName: req.body.search.trim()
         }
       }).then(function (data) {
         let send = ""

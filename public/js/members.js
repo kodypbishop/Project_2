@@ -5,4 +5,5 @@ $(document).ready(function() {
       console.log(data);
     $(".member-name").text(data.firstName);
   });
+
 });
