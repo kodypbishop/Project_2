@@ -8,25 +8,26 @@
             <ul class="pure-menu-list">
                 <li class="pure-menu-item">
                     <form class="pure-form">
-                    <input type="text"  class="pure-input-rounded"
-                    placeholder="search for a roommate">
-                    <button type="submit" class="pure-button pure-button-primary">Search</button>
+                        <input type="text" class="pure-input-rounded" placeholder="search for a roommate"
+                            id="searchBar">
+                        <button type="submit" class="pure-button pure-button-primary" id="submitSearch">Search</button>
                     </form>
-                </li> 
+                </li>
                 <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                    <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i class="fa fa-cog"></i></button></a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate</a></li>
-                            <li class="pure-menu-item"><a href="/adcancedsearch" class="pure-menu-link">Search</a></li>
-                            <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
-                            <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
-                        </ul>
+                    <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
+                                class="fa fa-cog"></i></button></a>
+                    <ul class="pure-menu-children">
+                        <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate</a></li>
+                        <li class="pure-menu-item"><a href="/adcancedsearch" class="pure-menu-link">Search</a></li>
+                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
+                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
-    
-       <div class="splash-container">
+
+    <div class="splash-container">
         <div class="splash">
             <h1 class="splash-head">Search Options</h1>
             <form class="pure-form">
@@ -35,11 +36,10 @@
             </form>
             <form class="pure-form">
                 <input type="text" id="firstName" class="pure-input-rounded" placeholder="First Name">
-                <input type="text" id="lastName" class="pure-input-rounded" placeholder="Last Name"
-                >
+                <input type="text" id="lastName" class="pure-input-rounded" placeholder="Last Name">
                 <button type="submit" id="submitName" class="pure-button pure-button-primary"> Submit </button>
             </form>
-           
+
         </div>
     </div>
 
@@ -47,3 +47,4 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/advancedsearch.js"></script>
+    <script type="text/javascript" src="js/searchbar.js"></script>
