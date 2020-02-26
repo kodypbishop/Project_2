@@ -153,6 +153,15 @@ module.exports = function(app) {
     }
   })
 
+  app.post("/api/review_data", (req, res) => {
+      db.reviews.create({
+          review: req.body.content,
+          reviewed_id: req.body.reviewee,
+          reviewer_id: req.body.reviewer,
+          stars: req.body.stars
+      })
+  })
+
   app.get("/api/review_data", (req, res) => {
     res.json({
         stars: req.reviews.firstName,

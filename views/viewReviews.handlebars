@@ -1,0 +1,49 @@
+<link href="../stylesheets/style.css" rel="stylesheet">
+<title>View Reviews</title>
+</head>
+
+<body>
+<div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <form class="pure-form">
+                        <div class="search">
+                        <input type="text" placeholder="Search..." id="searchBar">
+                        <span class="fa fa-search" id="submitSearch"></span>
+                        </div>
+                    </form>
+                </li>
+                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                    <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
+                                class="fa fa-cog"></i></button></a>
+                    <ul class="pure-menu-children">
+                        <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate</a></li>
+                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link">Search</a></li>
+                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
+                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <br><br>
+    <h1>Reviews</h1>
+    <h2>{{revieweeName}}</h2>
+    <ul>
+        {{#each review}}
+
+        <h3>{{reviewerName}}</h3>
+        <img src="../public/images/{{rating}}.png" alt="score-of-{{rating}}">
+        <p>{{review}}</p>
+        
+        {{/each}}
+    </ul>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/search.js"></script>
+    <script type="text/javascript" src="../js/searchbar.js"></script>
