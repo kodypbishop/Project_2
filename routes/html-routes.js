@@ -72,7 +72,16 @@ module.exports = function (app) {
   })
 
   app.get("/reviews", isAuthenticated, (req, res) => {
-    res.render("reviews");
+    res.render("rating");
   })
+
+  app.get("/review/:id", isAuthenticated, (req, res) => {
+      let reviewObj = {
+          reviewerId: req.user.id,
+          revieweeId: req.params.id
+      }
+    res.render("rating", reviewObj);
+  })
+
 
 }
