@@ -30,14 +30,13 @@
 
         <div class="splash-container-1">
             <div class="splash">
-                <h1 class="splash-head-1"> <span class="member-name"></span>'s Profile</span></h1> 
-                <p class="splash-subhead">
-                    <div class="pure-g-1-5"> Gender </div>
-                    <div class="pure-g-1-5"> Pets </div>
-                    <div class="pure-g-1-5"> Children </div>
-                    <div class="pure-g-1-5"> Job </div>
-                    <div class="pure-g-1-5"> Past Roommate's Review </div>
-                </p>
+                <h1 class="splash-head-1">
+                    {{#each names}}
+                     {{firstName}}'s Profile</h1> 
+                     {{last_name}}
+                     {{gender}}
+                     {{stars}}
+                    {{/each}}
             </div>
         </div>
 
