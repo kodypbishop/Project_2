@@ -62,7 +62,8 @@ module.exports = function(app) {
   
   app.post("/search", isAuthenticated, function (req, res) {
     console.log("HERE")
-    console.log(req.body)
+    console.log(req.user)
+    console.log("USER")
     if (req.body.email) {
       db.User.findAll({
         where: {
