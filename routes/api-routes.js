@@ -169,4 +169,13 @@ module.exports = function(app) {
         id: req.reviews.id
       });
   });
-};
+
+app.get("/api/profile"), (req, res) => {
+  res.json({
+    firstName: req.roommates.firstName, 
+    lastName: req.roommates.lastName,
+    gender: req.roommates.gender, 
+    stars: req.roommates.stars
+  });
+}};
+
