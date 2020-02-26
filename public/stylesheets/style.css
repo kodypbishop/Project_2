@@ -116,6 +116,11 @@ h1 {
   color: #111;
 }
 
+.pure-input-rounded {
+  text-align: center;
+  color: #111;
+}
+
 .splash {
   /* absolute center .splash within .splash-container */
   width: 80%;
@@ -133,7 +138,7 @@ h1 {
   z-index: 1;
   /* The following styles are required for the "scroll-over" effect */
   width: 100%;
-  height: auto;
+  height: 10%;
   top: 0;
   left: 0;
   position: fixed !important;
