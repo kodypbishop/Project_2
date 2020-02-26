@@ -64,7 +64,13 @@ module.exports = function (app) {
   })
 
   app.get("/profile", isAuthenticated, (req, res) => {
-    res.render("profile");
+    console.log(req.user);
+    let user = {
+    firstName: req.user.firstName, 
+    lastName: req.user.lastName,
+    gender: req.user.gender, 
+    stars: req.user.stars }
+    res.render("profile", user);
   })
 
   app.get("/rating", isAuthenticated, (req, res) => {

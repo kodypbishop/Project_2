@@ -1,18 +1,10 @@
-$(document).ready(function (data) {
-    $("/api/profile", function () {
-        $.ajax({
-            url: "/api/profile",
-            type: "GET",
-            data: {
-                firstName: $("#firstName").val(),
-                lastName: $("#lastName").val(),
-                gender: $("#gender").val(),
-                stars: $("#lastName").val(),
-
-            }.then(function () {
-                console.log(data)
-                window.location.replace("/profile");
-            })
-        })
-    })
-});
+$(document).ready(function() {
+    // This file just does a GET request to figure out which user is logged in
+    // and updates the HTML on the page
+    $.get("/api/user_data").then(function(data) {
+        console.log(data);
+      $(".member-name").text(data.firstName);
+      $(".member-gender").text(data.gender);
+    });
+  
+  });

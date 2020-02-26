@@ -19,7 +19,6 @@
                     <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
                                 class="fa fa-cog"></i></button></a>
                     <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate</a></li>
                         <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link">Search</a></li>
                         <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
                         <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
@@ -29,17 +28,17 @@
         </div>
     </div>
 
-        <div class="splash-container-1">
+       <div class="splash-container-1">
             <div class="splash">
-                <h1 class="splash-head-1">
-                    {{#each names}}
-                     {{firstName}}'s Profile</h1> 
-                     {{last_name}}
-                     {{gender}}
-                     {{stars}}
-                    {{/each}}
+                <h1 class="splash-head-1">{{firstName}} {{lastName}}'s Profile</h1> 
+                <p class="splash-subhead">
+                    <div class="pure-g-1-5"> Gender {{gender}}</div>
+                    <div class="pure-g-1-5"> Pets </div>
+                    <div class="pure-g-1-5"> Children </div>
+                    <div class="pure-g-1-5"> Job </div>
+                    <div class="pure-g-1-5"> Past Roommate's Review </div>
+                </p>
             </div>
-        </div>
 
   
 

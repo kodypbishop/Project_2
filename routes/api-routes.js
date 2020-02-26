@@ -161,12 +161,12 @@ module.exports = function(app) {
       });
   });
 
-app.get("/api/profile"), (req, res) => {
-  res.json({
-    firstName: req.roommates.firstName, 
-    lastName: req.roommates.lastName,
-    gender: req.roommates.gender, 
-    stars: req.roommates.stars
-  });
-}};
-
+//app.get("/api/profile"), (req, res) => {
+  //console.log(req.user)
+  //res.json({
+    //firstName: req.user.firstName, 
+    //lastName: req.user.lastName,
+    //gender: req.user.gender, 
+    //stars: req.user.stars
+  // });
+// }}
