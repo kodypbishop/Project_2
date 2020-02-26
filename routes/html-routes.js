@@ -83,5 +83,19 @@ module.exports = function (app) {
     res.render("rating", reviewObj);
   })
 
+  app.get("/reviews/:id", isAuthenticated, (req, res) => {
+    //   db.reviews.findAll({where: {reviewed_id: req.params.id},
+      db.reviews.findAll({where: {reviewed_id: req.params.id},
+        
+        include: db.Users
+        
+    
+        
+    }).then(function(dbReviews) {
+        console.log(dbReviews);
+        res.render("viewReviews");
+      })
+  })
+
 
 }
