@@ -1,3 +1,4 @@
+<link href="../stylesheets/style.css" rel="stylesheet">
 <title>Search Ratings</title>
 </head>
 
@@ -36,11 +37,11 @@
 
         {{name}}
 
-        <button data-id="{{id}}">
+        <button id="writeReview" data-id="{{id}}">
             Leave review
         </button>
 
-        <button data-id="{{id}}">
+        <button id="readReviews" data-id="{{id}}">
             read reviews
         </button>
         {{/each}}
@@ -48,5 +49,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/search.js"></script>
-    <script type="text/javascript" src="js/searchbar.js"></script>
+    <script type="text/javascript" src="../js/search.js"></script>
+    <script type="text/javascript" src="../js/searchbar.js"></script>
+    {{!-- <script type="text/javascript" src="/public/js/search.js"></script> --}}
+    {{!-- <script type="text/javascript" src="/public/js/searchbar.js"></script> --}}
