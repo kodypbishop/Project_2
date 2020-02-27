@@ -25,6 +25,11 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         isEmail: true
       }
+
+      Job: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      }
     },
     // The password cannot be null
     password: {
