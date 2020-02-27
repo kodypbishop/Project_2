@@ -2,6 +2,7 @@
 let db = require("../models");
 let passport = require("../config/passport");
 let isAuthenticated = require("../config/middleware/isAuthenticated");
+const { QueryTypes } = require('sequelize');
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -182,9 +183,10 @@ module.exports = function (app) {
   })
 
 
-//app.get("/api/profile"), (req, res) => {
+  //app.get("/api/profile"), (req, res) => {
   //console.log(req.user)
   //res.json({
+<<<<<<< HEAD
     //firstName: req.user.firstName, 
     //lastName: req.user.lastName,
     //gender: req.user.gender, 
@@ -193,3 +195,21 @@ module.exports = function (app) {
 // }}
 
 }
+=======
+  //firstName: req.user.firstName, 
+  //lastName: req.user.lastName,
+  //gender: req.user.gender, 
+  //stars: req.user.stars
+  // });
+  // }}
+
+  app.get("/reviews/:id", isAuthenticated, (req, res) => {
+    sequelize.query(`SELECT reviews, stars, concat(a.firstName,' ',a.lastName) as 'reviwee', concat(b.firstName,' ',b.lastName) as 'reviwer' from reviews left join users a on reviewed_id = b.id left join users b on reviewer_id = b.id where id = "${req.params.id}" `)
+      .then(function (dbReviews) {
+        console.log(dbReviews);
+        res.render("viewReviews");
+      })
+  })
+
+}
+>>>>>>> 3789c5a75377ca68737b777c8706f585ded102b7

@@ -5,6 +5,7 @@
   margin-top: 60px;
 } */
 
+
 .form-group {
     margin-bottom: 8px;
 }
@@ -47,7 +48,6 @@ body {
   font-size: 120%;
   float: left;
 }
-
 
 .home-menu .pure-menu-selected a {
   color: gainsboro;
@@ -163,6 +163,10 @@ div.stars {
 .pure-input-rounded {
   text-align: center;
   color: #111;
+}
+
+.pure-g-1-2 {
+text-align: center;
 }
 
 .splash {
@@ -285,15 +289,7 @@ div.stars {
       box-sizing: border-box;
   }
 
-  .home-menu .pure-input-rounded {
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid grey;
-    float: left;
-    width: 50%;
-    color: black;
-    margin-top: 5%;
-  } 
+  
 
   .home-menu .pure-button-1 {
     float: left;
