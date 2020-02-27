@@ -186,16 +186,6 @@ module.exports = function (app) {
   //app.get("/api/profile"), (req, res) => {
   //console.log(req.user)
   //res.json({
-<<<<<<< HEAD
-    //firstName: req.user.firstName, 
-    //lastName: req.user.lastName,
-    //gender: req.user.gender, 
-    //stars: req.user.stars
-  // });
-// }}
-
-}
-=======
   //firstName: req.user.firstName, 
   //lastName: req.user.lastName,
   //gender: req.user.gender, 
@@ -212,4 +202,3 @@ module.exports = function (app) {
   })
 
 }
->>>>>>> 3789c5a75377ca68737b777c8706f585ded102b7

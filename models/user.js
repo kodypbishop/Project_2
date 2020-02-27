@@ -22,11 +22,7 @@ module.exports = function (sequelize, DataTypes) {
     pets: {
       type: DataTypes.BOOLEAN,
     },
-<<<<<<< HEAD
-    jobs : {
-=======
     job: {
->>>>>>> 3789c5a75377ca68737b777c8706f585ded102b7
       type: DataTypes.STRING
     },
     

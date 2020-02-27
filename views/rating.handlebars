@@ -1,66 +1,35 @@
-<link href="../stylesheets/style.css" rel="stylesheet">
 <title>Reviews</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <form class="pure-form">
-                        <div class="search">
-                            <input type="text" placeholder="Search..." id="searchBar">
-                            <span class="fa fa-search" id="submitSearch"></span>
-                        </div>
-                    </form>
-                </li>
-                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                    <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
-                                class="fa fa-cog"></i></button></a>
-                    <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link">Search</a></li>
-                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
-                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+                <form class="pure-form">
+                    <input type="text" class="pure-input-rounded">
+                    <button type="submit" class="pure-button">Search</button>
+                </form>
+            </li>
+            <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate a Roommate</a></li>
+            <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
+            <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+        </ul>
+    </div>
+    </div>
+    <br><br>
+    <div class="container-2">
+        <div class="splash-container">
+            <div class="splash">
+                <h1 class="splash-head">Leave a Review</h1>
+                <fieldset class="pure-group">
+                    <textarea class="pure-input-1-2" placeholder="Rating"></textarea>
+                    <a class="pure-button pure-button-primary" href="#">Submit</a>
+                </fieldset>
+            </div>
         </div>
     </div>
-
-
-    <div class="splash-container">
-        <div class="splash">
-            <h1 class="splash-head">Leave a Review</h1>
-            <div class="pure-g-1-3">
-                <fieldset class="pure-group">
-                    <div class="stars">
-                        <form action="">
-                            <input class="star star-5" id="star-5" type="radio" name="star" value="5" />
-                            <label class="star star-5" for="star-5"></label>
-                            <input class="star star-4" id="star-4" type="radio" name="star" value="4" />
-                            <label class="star star-4" for="star-4"></label>
-                            <input class="star star-3" id="star-3" type="radio" name="star" value="3" />
-                            <label class="star star-3" for="star-3"></label>
-                            <input class="star star-2" id="star-2" type="radio" name="star" value="2" />
-                            <label class="star star-2" for="star-2"></label>
-                            <input class="star star-1" id="star-1" type="radio" name="star" value="1" />
-                            <label class="star star-1" for="star-1"></label>
-                        </form>
-                    </div>
-            </div>
-            <div class="pure-g-1-3">
-                <textarea class="pure-input-2" id="review-content" placeholder="Rating"></textarea>
-            </div>
-            <div class="pure-g-1-3">
-                <a data-reviewer="{{reviewerId}}" data-reviewee="{{revieweeId}}" class="pure-button pure-button-primary"
-                    id="submit-review" href="#">Submit</a>
-            </div>
-            </fieldset>
-        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/profile.js"></script>
-    <script type="text/javascript" src="../js/searchbar.js"></script>
-    <script type="text/javascript" src="../js/review.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
