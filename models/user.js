@@ -18,6 +18,9 @@ module.exports = function (sequelize, DataTypes) {
     pets: {
       type: DataTypes.BOOLEAN,
     },
+    job: {
+      type: DataTypes.STRING
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

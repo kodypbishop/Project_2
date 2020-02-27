@@ -5,6 +5,7 @@
   margin-top: 60px;
 } */
 
+
 .form-group {
     margin-bottom: 8px;
 }
@@ -47,7 +48,6 @@ body {
   font-size: 120%;
   float: left;
 }
-
 
 .home-menu .pure-menu-selected a {
   color: gainsboro;
@@ -110,7 +110,9 @@ div.stars {
 
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 /*search input */
-.search { position: relative; }
+.search { 
+  position: relative; 
+  right: 100%}
 
 .search input { 
   text-indent: 30px;
@@ -152,9 +154,19 @@ div.stars {
   color: #111;
 }
 
+.pure-input-2 {
+  text-align: left;
+  color: black;
+  width: 60%;
+}
+
 .pure-input-rounded {
   text-align: center;
   color: #111;
+}
+
+.pure-g-1-2 {
+text-align: center;
 }
 
 .splash {
@@ -277,15 +289,7 @@ div.stars {
       box-sizing: border-box;
   }
 
-  .home-menu .pure-input-rounded {
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid grey;
-    float: left;
-    width: 50%;
-    color: black;
-    margin-top: 5%;
-  } 
+  
 
   .home-menu .pure-button-1 {
     float: left;
