@@ -60,6 +60,12 @@ module.exports = function (app) {
     }
   });
 
+  app.get("/api/user_data/:id", (req, res) => {
+    db.User.findOne({where: {id: req.params.id}}).then(function(dbUser){
+        res.json(dbUser);
+    })
+})
+
 
   app.post("/search", isAuthenticated, function (req, res) {
     console.log("HERE")
@@ -170,6 +176,20 @@ module.exports = function (app) {
       id: req.reviews.id
     });
   });
+  app.patch("/api/user/:id", (req, res) => {
+    console.log("you did it")
+    console.log(req.params.id)
+    console.log(req.body)
+    db.User.update({ avatar: req.body.url },
+      { where:{
+        id:req.user.id
+      }  }
+
+    ).then(function (data) {
+    res.send.data
+  })
+  })
+
 
   //app.get("/api/profile"), (req, res) => {
   //console.log(req.user)
