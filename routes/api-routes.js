@@ -174,12 +174,14 @@ module.exports = function (app) {
     console.log("you did it")
     console.log(req.params.id)
     console.log(req.body)
-    db.user.update ({ avatar: req.body.url },
-    {where: req.user.id},
-    
-    )
-  }).then(function(data){
+    db.User.update({ avatar: req.body.url },
+      { where:{
+        id:req.user.id
+      }  }
+
+    ).then(function (data) {
     res.send.data
+  })
   })
 
 
