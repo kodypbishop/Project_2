@@ -177,5 +177,6 @@ module.exports = function(app) {
     //lastName: req.user.lastName,
     //gender: req.user.gender, 
     //stars: req.user.stars
-  // });
-// }}
+  // });//
+}
+
