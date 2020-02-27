@@ -12,6 +12,8 @@ CREATE TABLE roommates
     email VARCHAR(250) NOT NULL, 
     gender VARCHAR(20) NOT NULL CHECK (Gender IN ('Male', 'Female', 'Other', 'Prefer Not to Say')),
     stars INT NOT NULL, 
+    pets boolean, 
+    Job varchar(250) NOT NULL, 
     PRIMARY KEY (id)
 );
 
