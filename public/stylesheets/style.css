@@ -179,6 +179,7 @@ text-align: center;
   color: white;
   text-shadow: 2px 2px 5px #3c3c3c;
 }
+
 .splash-head-1 {
   text-align: left;
 }
@@ -260,14 +261,51 @@ text-align: center;
     text-align: center;
     background-color: white;
     border-radius: 10px;
-  }
+}
 
+#review-container {
+  /* absolute center .splash within .splash-container */
+  width: 50%;
+  margin: auto;
+  position: fixed;
+  top: 15%; left: 0; bottom: 10%; right: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px #3c3c3c;
+  background-color: white;
+  border-radius: 5px;
+}
 
+#review-content {
+    width: 80%;
+    height: 32vh;
+}
+
+.review-header{
+    color: #111;
+    text-shadow: none;
+    margin-top: 5%;
+    line-height: 40px;
+    margin-bottom: 2%;
+}
+
+/* Media query for small mobile devices */
+@media screen and (max-width: 39em) { 
+    #review-container {
+        width: 90%;
+        top: 20%; left: 0; bottom: 10%; right: 0;
+    }
+    /* #review-content {
+        width: 80%;
+    } */
+}
 /*
 * -- MOBILE (AND UP) MEDIA QUERIES --
 * On tablets and other medium-sized devices, we want to customize some
 * of the mobile styles.
 */
+
+
 @media screen and (max-width: 48em) { 
 
   .home-menu {
