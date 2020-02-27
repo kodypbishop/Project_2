@@ -2,12 +2,13 @@
 let db = require("../models");
 let passport = require("../config/passport");
 let isAuthenticated = require("../config/middleware/isAuthenticated");
+const { QueryTypes } = require('sequelize');
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
-  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+  app.post("/api/login", passport.authenticate("local"), function (req, res) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
@@ -18,30 +19,30 @@ module.exports = function(app) {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  app.post("/api/signup", function(req, res) {
-      console.log(req.body);
+  app.post("/api/signup", function (req, res) {
+    console.log(req.body);
     db.User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       password: req.body.password
     })
-      .then(function() {
+      .then(function () {
         res.redirect(307, "/api/login");
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.status(401).json(err);
       });
   });
 
   // Route for logging user out
-  app.get("/logout", function(req, res) {
+  app.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", function(req, res) {
+  app.get("/api/user_data", function (req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
@@ -59,7 +60,7 @@ module.exports = function(app) {
     }
   });
 
-  
+
   app.post("/search", isAuthenticated, function (req, res) {
     console.log("HERE")
     console.log(req.user)
@@ -74,9 +75,9 @@ module.exports = function(app) {
         data.forEach(element => {
           send += element.dataValues.id + ","
         });
-        res.send('/search/'+send);
+        res.send('/search/' + send);
       });
-    } if (req.body.firstName && req.body.lastName){
+    } if (req.body.firstName && req.body.lastName) {
       db.User.findAll({
         where: {
           firstName: req.body.firstName,
@@ -87,7 +88,7 @@ module.exports = function(app) {
         data.forEach(element => {
           send += element.dataValues.id + ","
         });
-        res.send('/search/'+send);
+        res.send('/search/' + send);
       })
 
     } else {
@@ -100,7 +101,7 @@ module.exports = function(app) {
         data.forEach(element => {
           send += element.dataValues.id + ","
         });
-        res.send('/search/'+send);
+        res.send('/search/' + send);
       })
     }
   })
@@ -109,7 +110,7 @@ module.exports = function(app) {
     console.log("HERE")
     console.log(req.body)
 
-    if (req.body.search.trim().indexOf("@")>-1) {
+    if (req.body.search.trim().indexOf("@") > -1) {
       db.User.findAll({
         where: {
           email: req.body.search.trim()
@@ -119,11 +120,11 @@ module.exports = function(app) {
         data.forEach(element => {
           send += element.dataValues.id + ","
         });
-        res.send('/search/'+send);
+        res.send('/search/' + send);
       });
 
 
-    } if (req.body.search.trim().indexOf(" ")>-1){
+    } if (req.body.search.trim().indexOf(" ") > -1) {
       let name = req.body.search.trim().split(" ")
       db.User.findAll({
         where: {
@@ -135,7 +136,7 @@ module.exports = function(app) {
         data.forEach(element => {
           send += element.dataValues.id + ","
         });
-        res.send('/search/'+send);
+        res.send('/search/' + send);
       })
 
     } else {
@@ -148,34 +149,44 @@ module.exports = function(app) {
         data.forEach(element => {
           send += element.dataValues.id + ","
         });
-        res.send('/search/'+send);
+        res.send('/search/' + send);
       })
     }
   })
 
   app.post("/api/review_data", (req, res) => {
-      db.reviews.create({
-          review: req.body.content,
-          reviewed_id: req.body.reviewee,
-          reviewer_id: req.body.reviewer,
-          stars: req.body.stars
-      })
+    db.reviews.create({
+      review: req.body.content,
+      reviewed_id: req.body.reviewee,
+      reviewer_id: req.body.reviewer,
+      stars: req.body.stars
+    })
   })
 
   app.get("/api/review_data", (req, res) => {
     res.json({
-        stars: req.reviews.firstName,
-        review: req.reviews.review,
-        id: req.reviews.id
-      });
+      stars: req.reviews.firstName,
+      review: req.reviews.review,
+      id: req.reviews.id
+    });
   });
 
-//app.get("/api/profile"), (req, res) => {
+  //app.get("/api/profile"), (req, res) => {
   //console.log(req.user)
   //res.json({
-    //firstName: req.user.firstName, 
-    //lastName: req.user.lastName,
-    //gender: req.user.gender, 
-    //stars: req.user.stars
+  //firstName: req.user.firstName, 
+  //lastName: req.user.lastName,
+  //gender: req.user.gender, 
+  //stars: req.user.stars
   // });
-// }}
+  // }}
+
+  app.get("/reviews/:id", isAuthenticated, (req, res) => {
+    sequelize.query(`SELECT reviews, stars, concat(a.firstName,' ',a.lastName) as 'reviwee', concat(b.firstName,' ',b.lastName) as 'reviwer' from reviews left join users a on reviewed_id = b.id left join users b on reviewer_id = b.id where id = "${req.params.id}" `)
+      .then(function (dbReviews) {
+        console.log(dbReviews);
+        res.render("viewReviews");
+      })
+  })
+
+}
