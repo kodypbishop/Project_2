@@ -154,6 +154,12 @@ div.stars {
   color: #111;
 }
 
+.pure-input-2 {
+  text-align: left;
+  color: black;
+  width: 60%;
+}
+
 .pure-input-rounded {
   text-align: center;
   color: #111;
