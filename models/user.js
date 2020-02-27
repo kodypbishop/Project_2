@@ -24,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
       unique: true,
       validate: {
         isEmail: true
-      }
+      },
 
       Job: {
         type: DataTypes.STRING,
