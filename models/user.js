@@ -18,6 +18,10 @@ module.exports = function (sequelize, DataTypes) {
     pets: {
       type: DataTypes.BOOLEAN,
     },
+    Job: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -25,6 +29,8 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         isEmail: true
       }
+
+    
     },
     // The password cannot be null
     password: {
