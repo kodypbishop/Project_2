@@ -38,38 +38,39 @@ module.exports = function (app) {
     console.log(req.params.data)
     id = req.params.data.split(",")
     id.pop()
-    for(let i=0; i<id.length;i++){
-     id[i] = + id[i];
+    for (let i = 0; i < id.length; i++) {
+      id[i] = + id[i];
     }
     console.log(id)
 
     db.User.findAll({
       where: {
-        id : id
+        id: id
       }
     }).then(function (data) {
       let send = []
       data.forEach(element => {
         console.log(element.dataValues)
-       let person ={
-         id:element.dataValues.id,
-         name : element.dataValues.firstName + " " + element.dataValues.lastName,
+        let person = {
+          id: element.dataValues.id,
+          name: element.dataValues.firstName + " " + element.dataValues.lastName,
 
-       };
+        };
         send.push(person)
       });
       console.log(send)
-      res.render("search",{person:send});
+      res.render("search", { person: send });
     })
   })
 
   app.get("/profile", isAuthenticated, (req, res) => {
     console.log(req.user);
     let user = {
-    firstName: req.user.firstName, 
-    lastName: req.user.lastName,
-    gender: req.user.gender, 
-    stars: req.user.stars }
+      firstName: req.user.firstName,
+      lastName: req.user.lastName,
+      gender: req.user.gender,
+      stars: req.user.stars
+    }
     res.render("profile", user);
   })
 
@@ -82,26 +83,18 @@ module.exports = function (app) {
   })
 
   app.get("/review/:id", isAuthenticated, (req, res) => {
-      let reviewObj = {
-          reviewerId: req.user.id,
-          revieweeId: req.params.id
-      }
+    let reviewObj = {
+      reviewerId: req.user.id,
+      revieweeId: req.params.id
+    }
     res.render("rating", reviewObj);
   })
 
   app.get("/reviews/:id", isAuthenticated, (req, res) => {
-    //   db.reviews.findAll({where: {reviewed_id: req.params.id},
-      db.reviews.findAll({where: {reviewed_id: req.params.id},
-        
-        include: db.Users
-        
-    
-        
-    }).then(function(dbReviews) {
-        console.log(dbReviews);
-        res.render("viewReviews");
+    db.sequelize.query(`SELECT review, stars, concat(a.firstName ,' ', a.lastName) as 'reviwee', concat(b.firstName, ' ', b.lastName) as 'reviwer' from reviews left join users a on reviewed_id = a.id left join users b on reviewer_id = b.id where reviewed_id = "${req.params.id}" `)
+      .then(function (dbReviews) {
+        res.render("viewReviews",{review : dbReviews[0], reviwee : dbReviews[0][0].reviwee});
       })
   })
-
-
 }
+
