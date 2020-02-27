@@ -27,9 +27,12 @@
             </ul>
         </div>
     </div>
+   
+
     <div class="splash-container">
         <div class="splash">
             <h1 class="splash-head">Leave a Review</h1>
+            <div class="pure-g-1-2">
             <fieldset class="pure-group">
                 <div class="stars">
                 <form action="">
@@ -44,9 +47,11 @@
                     <input class="star star-1" id="star-1" type="radio" name="star"value="1"/>
                     <label class="star star-1" for="star-1"></label>
                 </form>
+                </div> </div>
+                <div class="pure-g-1-2">
+                    <textarea class="pure-input-1" id="review-content" placeholder="Rating"></textarea>
+                    <a data-reviewer="{{reviewerId}}" data-reviewee="{{revieweeId}}" class="pure-button pure-button-primary" id="submit-review" href="#">Submit</a>
                 </div>
-                <textarea class="pure-input-1" id="review-content" placeholder="Rating"></textarea>
-                <a data-reviewer="{{reviewerId}}" data-reviewee="{{revieweeId}}" class="pure-button pure-button-primary" id="submit-review" href="#">Submit</a>
             </fieldset>
         </div>
     </div>
