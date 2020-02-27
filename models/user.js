@@ -12,16 +12,24 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    avatar : {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     gender: {
       type: DataTypes.STRING,
     },
     pets: {
       type: DataTypes.BOOLEAN,
     },
-    Job: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    jobs : {
+      type: DataTypes.STRING
     },
+    
+    children : {
+      type: DataTypes.BOOLEAN
+    },
+   
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -30,7 +38,7 @@ module.exports = function (sequelize, DataTypes) {
         isEmail: true
       }
 
-    
+
     },
     // The password cannot be null
     password: {
