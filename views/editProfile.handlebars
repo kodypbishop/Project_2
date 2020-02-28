@@ -67,38 +67,36 @@
 
 
 
-
-
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
         $(document).ready(function () {
-            let pets = "{{pets}}"
-            let gender = "{{gender}}"
-            let children = "{{children}}"
 
-            if (pets == "true") {
-                $('#yesPet').attr('checked', true);
-            } else if (pets == "false") {
-                $('#noPet').attr('checked', true);
-            } if (children == "true") {
-                $('#yesChildren').attr('checked', true);
-            } else if (children == "false") {
-                $('#noChildren').attr('checked', true);
-            } if (gender == "male") {
-                $('#male').attr('checked', true);
-            } else if (gender === "female") {
-                $('#female').attr('checked', true);
-            } else if (gender) {
-                $('#other').attr('checked', true);
+            $.get("/api/user_data", function(data){
+                getUpdatedData(data.id);
+            });
+
+            function getUpdatedData(id){
+                $.get("/api/user_data/"+id, function(updatedData){
+                    $("#job").val(updatedData.job);
+                    if (updatedData.pets == 1) {
+                        $('#yesPet').attr('checked', true);
+                    } else if (updatedData.pets == 0) {
+                        $('#noPet').attr('checked', true);
+                    } if (updatedData.children == 1) {
+                        $('#yesChildren').attr('checked', true);
+                    } else if (updatedData.children == 0) {
+                        $('#noChildren').attr('checked', true);
+                    } if (updatedData.gender == "male") {
+                        $('#male').attr('checked', true);
+                    } else if (updatedData.gender == "female") {
+                        $('#female').attr('checked', true);
+                    } else if (updatedData.gender == "other") {
+                        $('#other').attr('checked', true);
+                    }
+                })
             }
-
-            $.get("/api/user_data/", function(data){
-                $("#job").val(data.job);
-            })
-
-
         })
 
     </script>
