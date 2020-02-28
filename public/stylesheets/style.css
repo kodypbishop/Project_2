@@ -1,17 +1,6 @@
-/* form.signup {
-  margin-top: 40px;
-} */
-/* form.login {
-  margin-top: 60px;
-} */
-
-
-.form-group {
-    margin-bottom: 8px;
-}
 
 h2 {
-  margin-top: 100px;
+  margin-top: 15%;
 }
 h3 {
   margin-top: 50%;
@@ -354,11 +343,11 @@ text-align: center;
   text-align: center;
   color: #3c3c3c;
   width: 40%;
-  height: 60%;
   margin: auto;
-  margin-top: 50px;
+  padding-bottom: 10%;
   position: absolute;
-  top: 50px; left: 0; bottom: 0; right: 0;
+  top: 10%; left: 0; 
+  bottom: 20%; right: 0;
   text-align: center;
   background-color: white;
   border-radius: 10px;
@@ -368,11 +357,9 @@ text-align: center;
     text-align: center;
     color: #3c3c3c;
     width: 40%;
-    height: 75%;
     margin: auto;
-    margin-top: 50px;
     position: absolute;
-    top: 50px; left: 0; bottom: 0; right: 0;
+    top: 10%; left: 0; bottom: 20%; right: 0;
     text-align: center;
     background-color: white;
     border-radius: 10px;
