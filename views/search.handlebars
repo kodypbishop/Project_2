@@ -1,9 +1,9 @@
-<link href="stylesheets/style.css" rel="stylesheet">
-<title>Home</title>
+<link href="../stylesheets/style.css" rel="stylesheet">
+<title>Search Ratings</title>
 </head>
 
 <body>
-    <div class="header">
+<div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
             <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
             <ul class="pure-menu-list">
@@ -28,22 +28,25 @@
         </div>
     </div>
 
-    <div class="container-1">
-        <div class="splash-container">
-            <div class="splash">
-                <h1 class="splash-head"> Welcome <span class="member-name"></span></h1>
-                <p class="splash-subhead">
-                    What do you want to do?
-                </p>
-                <p>
-                    <a href="/advancedsearch" class="pure-button pure-button-primary">Advanced Search</a>
-                    <a href="/profile" class="pure-button pure-button-primary">Profile</a>
-                </p>
-            </div>
-        </div>
-    </div>
+    <h1>response</h1>
+    <ul>
+        {{#each person}}
+
+        {{name}}
+
+        <button id="writeReview" data-id="{{id}}">
+            Leave review
+        </button>
+
+        <button id="readReviews" data-id="{{id}}">
+            read reviews
+        </button>
+        {{/each}}
+    </ul>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
-    <script type="text/javascript" src="js/searchbar.js"></script>
+    <script type="text/javascript" src="../js/search.js"></script>
+    <script type="text/javascript" src="../js/searchbar.js"></script>
+    {{!-- <script type="text/javascript" src="/public/js/search.js"></script> --}}
+    {{!-- <script type="text/javascript" src="/public/js/searchbar.js"></script> --}}

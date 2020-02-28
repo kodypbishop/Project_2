@@ -1,9 +1,9 @@
-<link href="stylesheets/style.css" rel="stylesheet">
-<title>Home</title>
+<link href="../stylesheets/style.css" rel="stylesheet">
+<title>View Reviews</title>
 </head>
 
 <body>
-    <div class="header">
+<div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
             <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
             <ul class="pure-menu-list">
@@ -19,6 +19,7 @@
                     <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
                                 class="fa fa-cog"></i></button></a>
                     <ul class="pure-menu-children">
+                        <li class="pure-menu-item"><a href="/rating" class="pure-menu-link">Rate</a></li>
                         <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link">Search</a></li>
                         <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
                         <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
@@ -28,22 +29,23 @@
         </div>
     </div>
 
-    <div class="container-1">
-        <div class="splash-container">
+    <div class="splash-container-1">
             <div class="splash">
-                <h1 class="splash-head"> Welcome <span class="member-name"></span></h1>
+                <h1 class="splash-head-1">Reviews</h1>
                 <p class="splash-subhead">
-                    What do you want to do?
+                    <h2>{{reviwee}}</h2>
                 </p>
                 <p>
-                    <a href="/advancedsearch" class="pure-button pure-button-primary">Advanced Search</a>
-                    <a href="/profile" class="pure-button pure-button-primary">Profile</a>
+                    <div class="pure-g-1-4">{{#each review}}</div>
+                    <div class="pure-g-1-4"> <h3>{{reviwer}}</h3></div>
+                    <div class="pure-g-1-4"> <img src="../images/{{stars}}.png" alt="score-of-{{stars}}"> </div>
+                    <div class="pure-g-1-4"> <p>{{review}}</p></div> {{/each}}
                 </p>
             </div>
-        </div>
-    </div>
+    
+    
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
-    <script type="text/javascript" src="js/searchbar.js"></script>
+    <script type="text/javascript" src="../js/search.js"></script>
+    <script type="text/javascript" src="../js/searchbar.js"></script>

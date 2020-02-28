@@ -1,5 +1,5 @@
 <link href="stylesheets/style.css" rel="stylesheet">
-<title>Home</title>
+<title>Search Ratings</title>
 </head>
 
 <body>
@@ -28,22 +28,24 @@
         </div>
     </div>
 
-    <div class="container-1">
-        <div class="splash-container">
-            <div class="splash">
-                <h1 class="splash-head"> Welcome <span class="member-name"></span></h1>
-                <p class="splash-subhead">
-                    What do you want to do?
-                </p>
-                <p>
-                    <a href="/advancedsearch" class="pure-button pure-button-primary">Advanced Search</a>
-                    <a href="/profile" class="pure-button pure-button-primary">Profile</a>
-                </p>
-            </div>
+    <div class="splash-container">
+        <div class="splash">
+            <h1 class="splash-head">Search Options</h1>
+            <form class="pure-form">
+                <input type="email" id="email" class="pure-input-rounded" placeholder="search by email">
+                <button type="submit" id="submitEmail" class="pure-button pure-button-primary"> Submit </button>
+            </form>
+            <form class="pure-form">
+                <input type="text" id="firstName" class="pure-input-rounded" placeholder="First Name">
+                <input type="text" id="lastName" class="pure-input-rounded" placeholder="Last Name">
+                <button type="submit" id="submitName" class="pure-button pure-button-primary"> Submit </button>
+            </form>
+
         </div>
     </div>
 
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
+    <script type="text/javascript" src="js/advancedsearch.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>

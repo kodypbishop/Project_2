@@ -1,4 +1,422 @@
-form.signup,
-form.login {
+/* form.signup {
+  margin-top: 40px;
+} */
+/* form.login {
+  margin-top: 60px;
+} */
+
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+h2 {
+  margin-top: 100px;
+}
+h3 {
   margin-top: 50px;
 }
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7em;
+    font-size: 13px;
+    background: url(./images/bike-665925_1920.jpg);
+    color: white;
+}
+
+#email-input, #password-input{
+    margin: auto;
+}
+
+.home-menu {
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+  background-color: white;
+  float: right;
+}
+
+.home-menu .pure-menu-heading {
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 120%;
+  float: left;
+}
+
+.home-menu .pure-menu-selected a {
+  color: gainsboro;
+}
+
+.home-menu .pure-button-2 a:hover,
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: none;
+  border: none;
+  color: #AECFE5;
+}
+.home-menu .pure-menu-link{
+  text-align: left;
+  margin-right: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 5px #3c3c3c
+}
+
+/* Styling for star rating system */
+div.stars {
+    width: 270px;
+    display: inline-block;
+  }
+  
+  input.star { display: none; }
+  
+  label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+  }
+  
+  input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+  }
+  
+  input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+  }
+  
+  input.star-1:checked ~ label.star:before { color: #F62; }
+  
+  label.star:hover { transform: rotate(-15deg) scale(1.3); }
+  
+  label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+  }
+
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+/*search input */
+.search { 
+  position: relative; 
+  right: 100%}
+
+.search input { 
+  text-indent: 30px;
+  color: black;}
+
+  /*search icon*/
+.search .fa-search { 
+  position: absolute;
+  top: 10px;
+  left: 7px;
+  font-size: 15px;
+  color: dodgerblue
+}
+
+/* Clear floats */
+.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*
+* -- SPLASH STYLES --
+* This is the blue top section that appears on the page.
+*/
+
+.splash-container {
+  z-index: 1;
+  /* The following styles are required for the "scroll-over" effect */
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+}
+
+.pure-input-1 {
+  text-align: center;
+  color: #111;
+}
+
+.pure-input-2 {
+  text-align: left;
+  color: black;
+  width: 60%;
+}
+
+.pure-input-rounded {
+  text-align: center;
+  color: #111;
+}
+
+.pure-g-1-2 {
+text-align: center;
+}
+
+.splash {
+  /* absolute center .splash within .splash-container */
+  width: 80%;
+  margin: auto;
+  position: fixed;
+  top: 200px; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px #3c3c3c;
+}
+
+.splash-head-1 {
+  text-align: left;
+}
+.splash-container-1 {
+  z-index: 1;
+  /* The following styles are required for the "scroll-over" effect */
+  width: 100%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+
+}
+
+.pure-g-1-5 {
+  text-align: left;
+  text-shadow: 2px 2px 5px #3c3c3c;
+}
+
+.pure-button {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 4px;
+}
+
+.pure-button-1 {
+  background-color: transparent;
+  border: transparent;
+}
+
+/* This is the subheading that appears on the blue section */
+.splash-subhead {
+  letter-spacing: 0.05em;
+  font-size: 2em;
+  opacity: 0.8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+/*for the splash broder to be transparent*/
+.pure-group {
+  border: transparent;
+}
+
+
+/* This is the class used for the footer */
+.footer {
+  background: #111;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  height: auto;
+  text-align: center;
+}
+
+#login-container {
+  text-align: center;
+  color: #3c3c3c;
+  width: 40%;
+  height: 60%;
+  margin: auto;
+  margin-top: 50px;
+  position: absolute;
+  top: 50px; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#signup-container {
+    text-align: center;
+    color: #3c3c3c;
+    width: 40%;
+    height: 75%;
+    margin: auto;
+    margin-top: 50px;
+    position: absolute;
+    top: 50px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#review-container {
+  /* absolute center .splash within .splash-container */
+  width: 50%;
+  margin: auto;
+  position: fixed;
+  top: 15%; left: 0; bottom: 10%; right: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px #3c3c3c;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#review-content {
+    width: 80%;
+    height: 32vh;
+}
+
+.review-header{
+    color: #111;
+    text-shadow: none;
+    margin-top: 5%;
+    line-height: 40px;
+    margin-bottom: 2%;
+}
+
+/* Media query for small mobile devices */
+@media screen and (max-width: 39em) { 
+    #review-container {
+        width: 90%;
+        top: 20%; left: 0; bottom: 10%; right: 0;
+    }
+    /* #review-content {
+        width: 80%;
+    } */
+}
+/*
+* -- MOBILE (AND UP) MEDIA QUERIES --
+* On tablets and other medium-sized devices, we want to customize some
+* of the mobile styles.
+*/
+
+
+@media screen and (max-width: 48em) { 
+
+  .home-menu {
+      white-space: normal !important;
+  }   
+
+  .home-menu .pure-menu-heading {
+      font-size: 1.5em;
+      margin-left: 10%;
+  }
+
+  #login-container {
+      margin-top: 20px;
+  }
+
+  .pure-u-1-3 {
+      width: 100%;
+      padding: 1em;
+      box-sizing: border-box;
+  }
+
+  
+
+  .home-menu .pure-button-1 {
+    float: left;
+    margin-left: 95%;
+  }
+  .home-menu .pure-menu-children  {
+    margin-left: 85%;
+  }
+}
+
+
+
+/*
+* -- TABLET (AND UP) MEDIA QUERIES --
+* On tablets and other medium-sized devices, we want to customize some
+* of the mobile styles.
+*/
+@media screen and (min-width: 64em) {
+
+  /* We increase the body font size */
+  body {
+      font-size: 16px;
+  }
+
+  /* We can align the menu header to the left, but float the
+  menu items to the right. */
+  
+  .home-menu {
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .home-menu .pure-menu-heading {
+      font-size: 1.25em;
+  }
+  .home-menu ul {
+      float: right;
+  }
+  
+  
+  
+  /* We decrease the width of the .splash, since we have more width
+  to work with */
+  .splash {
+      width: 50%;
+      height: 50%;
+  }
+
+  .splash-head {
+      font-size: 250%;
+  }
+
+
+  /* We remove the border-separator assigned to .l-box-lrg */
+  .l-box-lrg {
+      border: none;
+  }
+
+  .home-menu .pure-input-rounded {
+    width: 80%;
+  }
+  
+}
+@media screen and (min-width: 84em) {
+  /* We increase the header font size even more */
+  .splash-head {
+      font-size: 300%;
+  }
+  .home-menu .pure-input-rounded {
+    width: 60%;
+  }
+
+  .home-menu .pure-button {
+    width: auto;
+    margin-right: 400px;
+  }
+ 
+}
+
+@media screen and (min-width: 86em) {
+
+  .home-menu .pure-input-rounded {
+    width: 60%;
+  }
+
+  .home-menu .pure-button {
+    width: auto;
+    margin-right: 700px;
+  }
+}
+
