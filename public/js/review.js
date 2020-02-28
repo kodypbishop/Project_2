@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+    let urlArr = window.location.href.split("/");
+    let id = urlArr[urlArr.length-1];
+
+    $.get("/api/user_data/"+id, function(data) {
+        $("#reviewee-name").text(data.firstName);
+    })
+
     $("#submit-review").on("click", function(e){
         e.preventDefault();
 
