@@ -10,7 +10,6 @@ h3 {
 h4 {
   font-size: 250%;
   color: black;
-  opacity: 1;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -40,7 +39,7 @@ a:focus {
 }
 
 .home-menu {
-  padding: 10px;
+  padding: .5%;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
   background-color: white;
   float: right;
@@ -55,7 +54,7 @@ a:focus {
 }
 
 .home-menu .pure-menu-selected a {
-  color: gainsboro;
+  color: rgba(220, 220, 200, 0.6);
 }
 
 .home-menu .pure-button-2 a:hover,
@@ -151,7 +150,7 @@ div.stars {
 .splash-container-2 {
   padding-left: 10%;
   text-align: left;
-  background-color:gainsboro;
+  background-color rgba(220, 220, 200, 0.6);
   color: black;
 }
 
@@ -177,20 +176,17 @@ div.stars {
 .pure-input-1 {
   text-align: center;
   color: #111;
-  opacity: 1;
 }
 
 .pure-input-2 {
   text-align: left;
   color: black;
   width: 60%;
-  opacity: 1;
 }
 
 .pure-input-rounded {
   text-align: center;
-  color: #111;
-  opacity: 1;
+  color: black;
 }
 
 .pure-g-1-2 {
@@ -244,8 +240,7 @@ text-align: center;
 
 .splash-subhead {
   letter-spacing: 0.05em;
-  font-size: 2em;
-  opacity: 0.8;
+  font-size: 2em;8;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
@@ -317,21 +312,19 @@ text-align: center;
   position: absolute;
   top: 20%; left: 0; bottom: 20%; right: 0;
   text-align: center;
-  background-color:gainsboro;
-  opacity: .8;
+  background-color: rgba(220, 220, 200, 0.5);
   border-radius: 10px;
 }
 
 .post-title-1 {
   font-size: 150%;
-  opacity: 1;
 }
 
 .content {
   padding:5%;
-  background-color: gainsboro;
-  opacity: .8;
+  background-color: rgba(220, 220, 200, 0.6);
 }
+
 .post {
   padding-bottom: 4em;
 }
@@ -397,7 +390,7 @@ text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: white;
+  color:#ccc;
   height: auto;
   text-align: center;
   padding: auto;
@@ -405,10 +398,17 @@ text-align: center;
 .footer a {
   color: #ccc;
   font-size: 80%;
+
 }
 .footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
+.footer .pure-menu a:focus, 
+.footer .pure-menu-item-2 {
   background: none;
+}
+
+.footer .pure-menu-item-2 {
+  float: right;
+  list-style-type: none;
 }
 
 #review-container {
@@ -600,7 +600,7 @@ text-align: center;
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 4px;
-    opacity: 1;
+
   }
 
   .home-menu .pure-button-1 {
