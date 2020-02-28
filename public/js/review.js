@@ -14,7 +14,7 @@ $(document).ready(function(){
             content: $("#review-content").val().trim(),
             reviewee: $(this).data("reviewee"),
             reviewer: $(this).data("reviewer"),
-            stars: $("input[name='star']:checked").val()
+            stars: $("input[name='stars']:checked").val()
         }
 
         $.post("/api/review_data", newReview, function(){
