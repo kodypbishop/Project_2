@@ -1,10 +1,15 @@
 
 h2 {
-  margin-top: 15%;
+  margin-top: 20%;
 }
 h3 {
   margin-top: 50%;
   font-weight: 300;
+}
+
+h4 {
+  font-size: 250%;
+  color: black;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -263,13 +268,13 @@ text-align: center;
   color: #fff;
 }
 
-.brand-title {
+.title {
   font-size: 200%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(244, 250, 253);
   padding-top: 20%;
 }
-.brand-tagline {
+.tagline {
   font-size: 150%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(176, 202, 219);
@@ -298,6 +303,24 @@ text-align: center;
 .nav-item a:focus {
     border: 2px solid rgb(61, 146, 201);
     text-decoration: none;
+}
+
+.content-search{
+  text-align: center;
+  color: black;
+  width: 40%;
+  margin: auto;
+  position: absolute;
+  top: 20%; left: 0; bottom: 20%; right: 0;
+  text-align: center;
+  background-color:gainsboro;
+  opacity: .8;
+  border-radius: 10px;
+}
+
+
+.post-title-1 {
+  font-size: 150%;
 }
 
 .content {
