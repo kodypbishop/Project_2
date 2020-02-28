@@ -20,17 +20,28 @@ $(document).ready(function() {
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
     event.preventDefault();
+
+    // Making sure that only the first letter of each name is uppercase, and the entire email address is lowecase before putting it in our object
+    let firstName = firstNameInput.val().trim()[0].toUpperCase().concat(firstNameInput.val().trim().substring(1).toLowerCase());
+
+    let lastName = lastNameInput.val().trim()[0].toUpperCase().concat(lastNameInput.val().trim().substring(1).toLowerCase());
+
+    let email = emailInput.val().trim().toLowerCase();
+
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
+
     let userData = {
-      firstName: firstNameInput.val().trim(),
-      lastName: lastNameInput.val().trim(),
-      email: emailInput.val().trim(),
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
       password: passwordInput.val().trim(),
       passwordVerify: passwordVerify.val().trim()
     };
 
     // Checks to see if all fields have input
     if (!userData.firstName || !userData.lastName || !userData.email || !userData.password || !userData.passwordVerify) {
-
         handleIncompleteField();
       return;
     }
