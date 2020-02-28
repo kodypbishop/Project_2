@@ -28,23 +28,77 @@
         </div>
     </div>
 
-       <div class="splash-container-1">
-            <div class="splash">
-                <h1 class="splash-head-1">{{firstName}} {{lastName}}'s Profile</h1> 
-                <p class="splash-subhead">
-                    <div class="pure-g-1-5"> Gender {{gender}}</div>
-                    <div class="pure-g-1-5"> Pets </div>
-                    <div class="pure-g-1-5"> Children </div>
-                    <div class="pure-g-1-5"> Job </div>
-                </p>
-            </div>
-
-  
+    <div class="splash-container-1">
 
 
 
 
+        <div class="splash">
+            <button id="upload_widget" class="cloudinary-button">Upload Image</button>
 
+            <h1 class="splash-head-1">{{firstName}} {{lastName}}'s Profile</h1>
+            <p class="splash-subhead">
+                <div class="pure-g-1-5"> Gender:
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <div class="pure-g-1-5"> Pets
+                    <input type="radio" id="yesPet" name="pets" value="1">
+                    <label for="yespet">Yes</label><br>
+                    <input type="radio" id="noPet" name="pets" value="0">
+                    <label for="nopet">No</label><br>
+                </div>
+                <div class="pure-g-1-5"> Children
+                    <input type="radio" id="yesChildren" name="children" value="1">
+                    <label for="yesChildren">Yes</label><br>
+                    <input type="radio" id="noChildren" name="children" value="0">
+                    <label for="noChildren">No</label><br>
+                </div>
+                <div class="pure-g-1-5"> Job <input type="text" name="job" id="job">
+                </div>
+            </p>
+            
+            <button id="updateProfile" class="">Update profile</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/profile.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            let pets = "{{pets}}"
+            let gender = "{{gender}}"
+            let children = "{{children}}"
+
+            if (pets == "true") {
+                $('#yesPet').attr('checked', true);
+            } else if (pets == "false") {
+                $('#noPet').attr('checked', true);
+            } if (children == "true") {
+                $('#yesChildren').attr('checked', true);
+            } else if (children == "false") {
+                $('#noChildren').attr('checked', true);
+            } if (gender == "male") {
+                $('#male').attr('checked', true);
+            } else if (gender === "female") {
+                $('#female').attr('checked', true);
+            } else if (gender) {
+                $('#other').attr('checked', true);
+            }
+
+        })
+
+    </script>
+    <script type="text/javascript" src="js/editProfile.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>

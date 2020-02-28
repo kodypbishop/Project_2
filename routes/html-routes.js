@@ -69,7 +69,10 @@ module.exports = function (app) {
       firstName: req.user.firstName,
       lastName: req.user.lastName,
       gender: req.user.gender,
-      stars: req.user.stars
+      pets: req.user.pets,
+      children: req.user.children,
+      job: req.user.job,
+      avatar: req.user.avatar
     }
     res.render("profile", user);
   })
@@ -96,5 +99,18 @@ module.exports = function (app) {
         res.render("viewReviews",{review : dbReviews[0], reviwee : dbReviews[0][0].reviwee});
       })
   })
+
+  
+  app.get("/edit-profile", isAuthenticated, (req, res) => {
+      console.log(req.user);
+      let user = {
+        firstName: req.user.firstName,
+        lastName: req.user.lastName,
+        gender: req.user.gender,
+        pets: req.user.pets,
+        children: req.user.children,
+      }
+      res.render("editProfile", user);
+    })
 }
 
