@@ -144,10 +144,6 @@ div.stars {
   display: table;
 }
 
-/*
-* -- SPLASH STYLES --
-* This is the blue top section that appears on the page.
-*/
 
 .splash-head-1 {
   float: left;
@@ -174,14 +170,14 @@ div.stars {
   position: fixed !important;
 }
 
-.splash-container-1 {
+/*.splash-container-1 {
   z-index: 1;
-  /* The following styles are required for the "scroll-over" effect */
+  The following styles are required for the "scroll-over" effect 
   width: 100%;
   top: 0;
   left: 0;
   position: fixed !important;
-}
+} */
 
 .pure-input-1 {
   text-align: center;
@@ -213,8 +209,6 @@ text-align: center;
   color: white;
   text-shadow: 2px 2px 5px #3c3c3c;
 }
-<<<<<<< HEAD
-=======
 
 .splash-head-1 {
   text-align: left;
@@ -227,7 +221,7 @@ text-align: center;
   top: 0;
   left: 0;
   position: fixed !important;
->>>>>>> 82465e2d4d7f303c0d690e803a55c73ce7de7593
+}
 
 .splash-1 {
   text-shadow: 2px 2px 5px #3c3c3c;;
@@ -382,7 +376,6 @@ text-align: center;
     text-align: center;
     background-color: white;
     border-radius: 10px;
-<<<<<<< HEAD
   }
   /* This is the class used for the footer */
 .footer {
@@ -402,7 +395,6 @@ text-align: center;
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
   background: none;
-=======
 }
 
 #review-container {
@@ -416,7 +408,6 @@ text-align: center;
   text-shadow: 2px 2px 5px #3c3c3c;
   background-color: white;
   border-radius: 5px;
->>>>>>> 82465e2d4d7f303c0d690e803a55c73ce7de7593
 }
 
 #review-content {
