@@ -289,16 +289,137 @@ text-align: center;
     margin-bottom: 2%;
 }
 
+#profile-container {
+    background-color: white;
+    color: #111;
+    text-shadow: none;
+    top: 10px; left: 0; bottom: 0; right: 0;
+    border-radius: 10px;
+    padding: 0 15px;
+    width: 35%;
+    height: 60vh;
+}
+
+.profile-name {
+    color: #111;
+    text-shadow: none;
+    margin-top: 0;
+}
+
+.profile-att {
+    text-shadow: none;
+    display: flex;
+    line-height: 14px;
+}
+
+#profile-pic{
+    margin: 10px 0;
+    border-radius: 50%;
+}
+
+#edit-container{
+  /* absolute center .splash within .splash-container */
+  width: 35%;
+  margin: auto;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  color: black;
+  text-shadow: none;
+  background-color: white;
+  height: 70vh;
+  border-radius: 10px;
+}
+
+.att-type{
+    margin: 0;
+    /* display: inline; */
+    padding-bottom: 20px;
+}
+
+.att-opt{
+    margin-left: 10px;
+}
+
+#updateProfile {
+    background-color: #228b22;
+}
+
+.quick-link {
+    padding: 8px;
+}
+
+#about{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.epb {
+    margin-top: 5px;
+}
+
+.epb a{    
+    font-size: 14px;
+    text-decoration: none;
+    color: #0000EE;
+}
+
+.epb a:hover{
+    text-decoration: underline;
+}
+
 /* Media query for small mobile devices */
+
+@media screen and (min-width: 701px) and (max-width: 1100px) { 
+    #profile-container {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) { 
+    #edit-container {
+        width: 46%;
+    }
+    #profile-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px) { 
+    #edit-container {
+        width: 55%;
+    }
+    #profile-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 500px) { 
+    #edit-container {
+        width: 80%;
+    }
+    #profile-container {
+        width: 85%;
+    }
+}
+
 @media screen and (max-width: 39em) { 
     #review-container {
         width: 90%;
         top: 20%; left: 0; bottom: 10%; right: 0;
     }
-    /* #review-content {
-        width: 80%;
-    } */
+    #edit-container {
+        width: 95%;
+        height: 65vh;
+        top: 10%; left: 0; bottom: 0; right: 0;
+    }
+    #profile-container {
+        width: 90%;
+    }
 }
+
 /*
 * -- MOBILE (AND UP) MEDIA QUERIES --
 * On tablets and other medium-sized devices, we want to customize some

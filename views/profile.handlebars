@@ -19,9 +19,10 @@
                     <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
                                 class="fa fa-cog"></i></button></a>
                     <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link">Search</a></li>
-                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
-                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link quick-link">Search</a></li>
+                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link quick-link">View Profile</a></li>
+                        <li class="pure-menu-item"><a href="/edit-profile" class="pure-menu-link quick-link">Edit Profile</a></li>
+                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link quick-link"> Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -29,16 +30,20 @@
     </div>
 
     <div class="splash-container-1">
-        <div class="splash">
-            <h1 class="splash-head-1">{{firstName}} {{lastName}}'s Profile</h1>
-            <img src="{{avatar}}" alt="Your picture" height="100px" width="auto ">
-            <p class="splash-subhead">
-                <div class="pure-g-1-5"> Gender: {{gender}}</div>
-                <div class="pure-g-1-5"> Pets: {{pets}}</div>
-                <div class="pure-g-1-5"> Children: {{children}}</div>
-                <div class="pure-g-1-5"> Job: {{job}}</div>
-            </p>
+        <div class="splash" id = "profile-container">
+            <img src="{{avatar}}" alt="Your picture" id="profile-pic" height="110px" width="auto ">
+            <h2 class="profile-name">{{firstName}} {{lastName}}</h2>
+            <p id="about">about</p>
+            {{!-- <p class="splash-subhead"> --}}
+                {{!-- <div class="pure-g-1-5 profile-att"> Gender: {{gender}}</div> --}}
+                <div class="profile-aspect"> Gender: {{gender}}</div>
+                <div class="profile-aspect"> Pets: {{pets}}</div>
+                <div class="profile-aspect"> Children: {{children}}</div>
+                <div class="profile-aspect"> Occupation: {{job}}</div>
+                <div class="profile-aspect epb"><a href="/edit-profile">Edit your profile</a></div>
+            {{!-- </p> --}}
         </div>
+    </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/profile.js"></script>

@@ -54,6 +54,8 @@ module.exports = function (app) {
         lastName: req.user.lastName,
         gender: req.user.gender,
         pets: req.user.pets,
+        job: req.user.job,
+        children: req.user.children,
         email: req.user.email,
         id: req.user.id
       });

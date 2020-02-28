@@ -19,9 +19,10 @@
                     <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
                                 class="fa fa-cog"></i></button></a>
                     <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link">Search</a></li>
-                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">Profile</a></li>
-                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link"> Logout</a></li>
+                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link quick-link">Search</a></li>
+                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link quick-link">View Profile</a></li>
+                        <li class="pure-menu-item"><a href="/edit-profile" class="pure-menu-link quick-link">Edit Profile</a></li>
+                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link quick-link"> Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -29,40 +30,36 @@
     </div>
 
     <div class="splash-container-1">
-
-
-
-
-        <div class="splash">
-            <button id="upload_widget" class="cloudinary-button">Upload Image</button>
-
-            <h1 class="splash-head-1">{{firstName}} {{lastName}}'s Profile</h1>
+        <div class="splash" id="edit-container">
+            {{!-- <button id="upload_widget" class="cloudinary-button">Upload Image</button> --}}
+            <h1 class="profile-name">{{firstName}} {{lastName}}'s Profile</h1>
             <p class="splash-subhead">
-                <div class="pure-g-1-5"> Gender:
-                    <input type="radio" id="male" name="gender" value="male">
+                <button id="upload_widget" class="cloudinary-button">Upload Profile Photo</button>
+                <div class="pure-g-1-5 profile-att"> <h4 class="att-type">Gender:</h4>
+                    <input type="radio" class="att-opt" id="male" name="gender" value="male">
                     <label for="male">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="female">
+                    <input type="radio" class="att-opt" id="female" name="gender" value="female">
                     <label for="female">Female</label><br>
-                    <input type="radio" id="other" name="gender" value="other">
+                    <input type="radio" class="att-opt" id="other" name="gender" value="other">
                     <label for="other">Other</label>
                 </div>
-                <div class="pure-g-1-5"> Pets
-                    <input type="radio" id="yesPet" name="pets" value="1">
+                <div class="pure-g-1-5 profile-att"> <h4 class="att-type">Pets:</h4>
+                    <input type="radio" class="att-opt"id="yesPet" name="pets" value="1">
                     <label for="yespet">Yes</label><br>
-                    <input type="radio" id="noPet" name="pets" value="0">
+                    <input type="radio" class="att-opt"id="noPet" name="pets" value="0">
                     <label for="nopet">No</label><br>
                 </div>
-                <div class="pure-g-1-5"> Children
-                    <input type="radio" id="yesChildren" name="children" value="1">
+                <div class="pure-g-1-5 profile-att"> <h4 class="att-type">Children:</h4>
+                    <input type="radio" class="att-opt"id="yesChildren" name="children" value="1">
                     <label for="yesChildren">Yes</label><br>
-                    <input type="radio" id="noChildren" name="children" value="0">
+                    <input type="radio" class="att-opt"id="noChildren" name="children" value="0">
                     <label for="noChildren">No</label><br>
                 </div>
-                <div class="pure-g-1-5"> Job <input type="text" name="job" id="job">
+                <div class="pure-g-1-5 profile-att"> <h4 class="att-type">Occupation:</h4> <input type="text" name="job" id="job">
                 </div>
             </p>
             
-            <button id="updateProfile" class="">Update profile</button>
+            <button id="updateProfile" class="pure-button pure-button-primary">Save changes</button>
         </div>
     </div>
 
@@ -96,6 +93,11 @@
             } else if (gender) {
                 $('#other').attr('checked', true);
             }
+
+            $.get("/api/user_data/", function(data){
+                $("#job").val(data.job);
+            })
+
 
         })
 
