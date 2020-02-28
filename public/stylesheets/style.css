@@ -10,6 +10,7 @@ h3 {
 h4 {
   font-size: 250%;
   color: black;
+  opacity: 1;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -176,17 +177,20 @@ div.stars {
 .pure-input-1 {
   text-align: center;
   color: #111;
+  opacity: 1;
 }
 
 .pure-input-2 {
   text-align: left;
   color: black;
   width: 60%;
+  opacity: 1;
 }
 
 .pure-input-rounded {
   text-align: center;
   color: #111;
+  opacity: 1;
 }
 
 .pure-g-1-2 {
@@ -318,9 +322,9 @@ text-align: center;
   border-radius: 10px;
 }
 
-
 .post-title-1 {
   font-size: 150%;
+  opacity: 1;
 }
 
 .content {
@@ -596,6 +600,7 @@ text-align: center;
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 4px;
+    opacity: 1;
   }
 
   .home-menu .pure-button-1 {
