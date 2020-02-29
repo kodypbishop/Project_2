@@ -12,7 +12,14 @@ h4 {
   font-size: 250%;
   color: black;
 }
+h5 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
 
+hr.new1 {
+  border-top: 1px solid rgb(61, 79, 93, .7);
+}
 #search-header{
     font-size: 250%;
     color: black;
@@ -193,7 +200,7 @@ div.stars {
 
 .pure-input-rounded {
   text-align: center;
-  color: black;
+  color: black; 
 }
 
 .pure-g-1-2 {
@@ -580,6 +587,20 @@ text-align: center;
     #profile-container {
         width: 90%;
     }
+
+    .content-search {
+      width: 90%;
+      font-size: small;
+    }
+
+    .post-title-1 {
+      font-size: 1.5em;
+      letter-spacing: initial;
+    }
+
+
+
+
 }
 
 /*
@@ -623,6 +644,22 @@ text-align: center;
   }
   .home-menu .pure-menu-children  {
     margin-left: 85%;
+  }
+  .content-search {
+    width: 90%;
+    font-size: small;
+    letter-spacing: initial;
+  }
+
+  .post-title-1 {
+    font-size: 1.5em;
+    letter-spacing: initial;
+    margin: 10px;
+  }
+
+  .pure-input-rounded {
+    text-align: center;
+    float: left;
   }
 
 }

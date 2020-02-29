@@ -19,7 +19,10 @@ $(document).ready(function(){
            
         $.post("/api/review_data", newReview, function(){
 
-        })
+        }).then (function(data){
+            console.log(data)
+            window.location.pathname = "/members"
+        });
 
     })
 })

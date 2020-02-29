@@ -163,11 +163,14 @@ module.exports = function (app) {
   })
 
   app.post("/api/review_data", (req, res) => {
+    console.log(res.body)
     db.reviews.create({
       review: req.body.content,
       reviewed_id: req.body.reviewee,
       reviewer_id: req.body.reviewer,
       stars: req.body.stars
+    }).then(function(data){
+      res.send("/members")
     })
   })
 
