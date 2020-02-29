@@ -96,7 +96,7 @@ module.exports = function (app) {
   app.get("/reviews/:id", isAuthenticated, (req, res) => {
     db.sequelize.query(`SELECT review, stars, concat(a.firstName ,' ', a.lastName) as 'reviewee', concat(b.firstName, ' ', b.lastName) as 'reviewer' from reviews left join users a on reviewed_id = a.id left join users b on reviewer_id = b.id where reviewed_id = "${req.params.id}" `)
       .then(function (dbReviews) {
-        res.render("viewReviews",{review : dbReviews[0], reviwee : dbReviews[0][0].reviwee});
+        res.render("viewReviews",{review : dbReviews[0], reviwee : dbReviews[0][0].reviewee});
       })
   })
 

@@ -8,15 +8,9 @@ h3 {
   font-weight: 300;
 }
 
-<<<<<<< HEAD
-#search-header{
-    font-size: 250%;
-    color: black;
-=======
 h4 {
   font-size: 250%;
   color: black;
->>>>>>> d58c422c62646a004cb08410968db1a3936d5bc4
 }
 
 * {
@@ -328,9 +322,14 @@ text-align: center;
   font-size: 150%;
 }
 
-.content {
-  padding:5%;
+.content{
+  padding:10%;
   background-color: rgba(220, 220, 200, 0.6);
+} 
+
+.content-1 {
+  background-color: rgba(220, 220, 200, 0.6);
+  padding-bottom: 30%;
 }
 
 .post {
@@ -350,6 +349,9 @@ text-align: center;
   font-family: Georgia, "Cambria", serif;
   color: black;
   line-height: 1.5em;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 5%;
 }
 .post-meta {
   color: black;
@@ -401,12 +403,10 @@ text-align: center;
   color:#ccc;
   height: auto;
   text-align: center;
-  padding: auto;
 }
 .footer a {
   color: #ccc;
   font-size: 80%;
-
 }
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus, 
@@ -415,8 +415,9 @@ text-align: center;
 }
 
 .footer .pure-menu-item-2 {
-  float: right;
   list-style-type: none;
+  font-size: 80%;
+  float: right;
 }
 
 #review-container {

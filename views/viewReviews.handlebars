@@ -19,9 +19,12 @@
                     <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
                                 class="fa fa-cog"></i></button></a>
                     <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="/advancedsearch" class="pure-menu-link quick-link">Search</a></li>
-                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link quick-link">View Profile</a></li>
-                        <li class="pure-menu-item"><a href="/edit-profile" class="pure-menu-link quick-link">Edit Profile</a></li>
+                        <li class="pure-menu-item"><a href="/advancedsearch"
+                                class="pure-menu-link quick-link">Search</a></li>
+                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link quick-link">View Profile</a>
+                        </li>
+                        <li class="pure-menu-item"><a href="/edit-profile" class="pure-menu-link quick-link">Edit
+                                Profile</a></li>
                         <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link quick-link"> Logout</a></li>
                     </ul>
                 </li>
@@ -37,26 +40,23 @@
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a class="pure-button" href="/rating">Leave A Rating</a>
+                            <a class="pure-button" href="/search">Leave A Rating</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
 
-        <div class="content pure-u-1 pure-u-md-3-4">
+        <div class="content-1 pure-u-1 pure-u-md-3-4">
             <div>
                 <div class="posts">
                     <section class="post">
-                        <header class="post-header">
-                            <h2 class="post-title"> Review of {{reviwee}}</h2>
-                        </header>
-
                         <div class="post-description">
-                            <p class="post-meta"> 
+                            <p class="post-meta">
                                 {{#each review}}
-                                <img src="../images/{{stars}}.png" alt="score-of-{{stars}}"> 
-                                <p>{{reviwer}}<img width="48" height="48" alt="Tilo Mitra&#x27;s avatar" class="post-avatar" src="img/common/tilo-avatar.png"></p>
+                                <img src="../images/{{stars}}.png" alt="score-of-{{stars}}">
+                                <p>{{reviwer}}<img width="48" height="48" alt="Tilo Mitra&#x27;s avatar"
+                                        class="post-avatar" src="img/common/tilo-avatar.png"></p>
                                 <p>{{review}}</p>
                                 <p>{{/each}}</p>
                         </div>
@@ -65,7 +65,7 @@
             </div>
         </div>
     </div>
-    </div>
+    
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
