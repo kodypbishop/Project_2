@@ -1,10 +1,14 @@
 module.exports = function (sequelize, DataTypes) {
     var reviews = sequelize.define('reviews', {
 
-        stars: DataTypes.INTEGER,
+        stars: {
+            type: DataTypes.INTEGER,
+        },
+        review: {
+            type: DataTypes.TEXT
+        },
+      
 
-        review: DataTypes.TEXT
-        
     })
     reviews.associate = function (models) {
         // We're saying that a Post should belong to an Author
