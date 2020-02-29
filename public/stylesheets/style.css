@@ -48,7 +48,7 @@ a:focus {
   text-decoration: underline;
 }
 
-#email-input, #password-input{
+#email-input, #password-input, #first-name, #last-name, #password-verify{
     margin: auto;
 }
 
@@ -486,6 +486,10 @@ text-align: center;
     border-radius: 50%;
 }
 
+#signup-header {
+    margin-top: 20px;
+}
+
 #edit-container{
   /* absolute center .splash within .splash-container */
   width: 35%;
@@ -539,11 +543,38 @@ text-align: center;
     text-decoration: underline;
 }
 
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.lr-btn{
+    height: 40px;
+    margin-top: 24px;
+}
+
+.search-pic{
+    border-radius: 50%;
+}
+
+.search-names {
+    letter-spacing: normal;
+}
+
 /* Media query for small mobile devices */
 
 @media screen and (min-width: 701px) and (max-width: 1100px) { 
     #profile-container {
         width: 50%;
+    }
+    .content-search {
+        width: 80%;
+    }
+    .search-container {
+        margin: 0;
     }
 }
 
@@ -554,6 +585,16 @@ text-align: center;
     #profile-container {
         width: 80%;
     }
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 85%;
+    }
+    #login-container, #signup-container{
+        width: 60%;
+        top: 10%; left: 0; bottom: 10%; right: 0;
+    }
 }
 
 @media screen and (min-width: 501px) and (max-width: 600px) { 
@@ -563,6 +604,16 @@ text-align: center;
     #profile-container {
         width: 80%;
     }
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 85%;
+    }
+    #login-container, #signup-container{
+        width: 70%;
+        top: 10%; left: 0; bottom: 10%; right: 0;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 500px) { 
@@ -571,6 +622,16 @@ text-align: center;
     }
     #profile-container {
         width: 85%;
+    }
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 90%;
+    }
+    #login-container, #signup-container{
+        width: 88%;
+        top: 10%; left: 0; bottom: 10%; right: 0;
     }
 }
 
@@ -588,19 +649,28 @@ text-align: center;
         width: 90%;
     }
 
-    .content-search {
-      width: 90%;
-      font-size: small;
-    }
-
     .post-title-1 {
       font-size: 1.5em;
       letter-spacing: initial;
     }
 
-
-
-
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 100%;
+        font-size: small;
+    }
+    .search-pic{
+        height: 70px;
+    }
+    .lr-btn {
+        font-size: 80%;
+    }
+    #login-container, #signup-container{
+        width: 90%;
+        top: 5%; left: 0; bottom: 10%; right: 0;
+    }
 }
 
 /*
@@ -643,7 +713,7 @@ text-align: center;
     margin-left: 95%;
   }
   .home-menu .pure-menu-children  {
-    margin-left: 85%;
+    /* margin-left: 85%; */
   }
   .content-search {
     width: 90%;

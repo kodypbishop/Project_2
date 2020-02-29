@@ -34,28 +34,20 @@
 
     <div class="pure-g">
         <div class="content-search pure-u-md-1-2">
-            <div class="header">
-                <h4> Here is {{#each person}} {{name}}</h4>
-                <div class="posts">
-                    <section class="post">
-                        <header class="post-header">
-                            <h5 class="post-title-1"> What do you want to do? </h5>
-                        </header>
-                        <p>
-                            <ul>
-                                <button type="submit" class="pure-button pure-button-primary" id="writeReview" data-id="{{id}}">
-                                    Leave review
-                                </button>
+            {{#each person}}
+            <div class="search-container">
 
-                                <button type="submit" class="pure-button pure-button-primary" id="readReviews" data-id="{{id}}">
-                                    Read reviews
-                                </button>
-                                {{/each}}
-                            </ul>
-                        </p>
-                    </section>
-                </div>
+                <img src="{{avatar}}" class="search-pic" alt="profile-pic" height="90px">
+                <h4 class="search-names">{{name}}</h4>
+                <button type="submit" class="pure-button pure-button-primary lr-btn" id="writeReview" data-id="{{id}}">
+                    Leave review
+                </button>
+                
+                <button type="submit" class="pure-button pure-button-primary lr-btn" id="readReviews" data-id="{{id}}">
+                    Read reviews
+                </button>
             </div>
+            {{/each}}
         </div>
     </div>
 

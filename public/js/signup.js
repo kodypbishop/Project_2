@@ -22,23 +22,26 @@ $(document).ready(function() {
     event.preventDefault();
 
     // Making sure that only the first letter of each name is uppercase, and the entire email address is lowecase before putting it in our object
-    let firstName = firstNameInput.val().trim()[0].toUpperCase().concat(firstNameInput.val().trim().substring(1).toLowerCase());
+    let userData;
+    if (firstNameInput.val() == "" || lastNameInput.val() == ""){
+        handleIncompleteField();
+    } else {
 
-    let lastName = lastNameInput.val().trim()[0].toUpperCase().concat(lastNameInput.val().trim().substring(1).toLowerCase());
+        let firstName = firstNameInput.val().trim()[0].toUpperCase().concat(firstNameInput.val().trim().substring(1).toLowerCase());
+    
+        let lastName = lastNameInput.val().trim()[0].toUpperCase().concat(lastNameInput.val().trim().substring(1).toLowerCase());
+    
+        let email = emailInput.val().trim().toLowerCase();
 
-    let email = emailInput.val().trim().toLowerCase();
+        userData = {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: passwordInput.val().trim(),
+          passwordVerify: passwordVerify.val().trim()
+        };
+    
 
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-
-    let userData = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: passwordInput.val().trim(),
-      passwordVerify: passwordVerify.val().trim()
-    };
 
     // Checks to see if all fields have input
     if (!userData.firstName || !userData.lastName || !userData.email || !userData.password || !userData.passwordVerify) {
@@ -62,7 +65,8 @@ $(document).ready(function() {
     signUpUser(userData);
     emailInput.val("");
     passwordInput.val("");
-  });
+    }   
+});
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
