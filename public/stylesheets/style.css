@@ -1,26 +1,35 @@
-/* form.signup {
-  margin-top: 40px;
-} */
-/* form.login {
-  margin-top: 60px;
-} */
-
-
-.form-group {
-    margin-bottom: 8px;
-}
 
 h2 {
-  margin-top: 100px;
+  margin-top: 20%;
 }
+
 h3 {
-  margin-top: 50px;
+  margin-top: 50%;
+  font-weight: 300;
+}
+
+#search-header {
+  font-size: 250%;
+  color: black;
+}
+
+h5 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+hr.new1 {
+  border-top: 1px solid rgb(61, 79, 93, .7);
+}
+#search-header{
+    font-size: 250%;
+    color: black;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -30,12 +39,22 @@ body {
     color: white;
 }
 
-#email-input, #password-input{
+a {
+  text-decoration: none;
+  color: rgb(61, 146, 201);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+#email-input, #password-input, #first-name, #last-name, #password-verify{
     margin: auto;
 }
 
 .home-menu {
-  padding: 10px;
+  padding: .5%;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
   background-color: white;
   float: right;
@@ -50,7 +69,7 @@ body {
 }
 
 .home-menu .pure-menu-selected a {
-  color: gainsboro;
+  color: rgba(220, 220, 200, 0.6);
 }
 
 .home-menu .pure-button-2 a:hover,
@@ -112,7 +131,7 @@ div.stars {
 /*search input */
 .search { 
   position: relative; 
-  right: 100%}
+  }
 
 .search input { 
   text-indent: 30px;
@@ -134,20 +153,40 @@ div.stars {
   display: table;
 }
 
-/*
-* -- SPLASH STYLES --
-* This is the blue top section that appears on the page.
-*/
+
+.splash-head-1 {
+  float: left;
+  font-size: 350%;
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 30%;
+}
+
+.splash-container-2 {
+  padding-left: 10%;
+  text-align: left;
+  background-color rgba(220, 220, 200, 0.6);
+  color: black;
+}
 
 .splash-container {
   z-index: 1;
   /* The following styles are required for the "scroll-over" effect */
-  width: 100%;
-  height: auto;
+  width: 40%;
+  height: 60%;
   top: 0;
   left: 0;
   position: fixed !important;
 }
+
+/*.splash-container-1 {
+  z-index: 1;
+  The following styles are required for the "scroll-over" effect 
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+} */
 
 .pure-input-1 {
   text-align: center;
@@ -162,7 +201,7 @@ div.stars {
 
 .pure-input-rounded {
   text-align: center;
-  color: #111;
+  color: black; 
 }
 
 .pure-g-1-2 {
@@ -191,8 +230,12 @@ text-align: center;
   top: 0;
   left: 0;
   position: fixed !important;
-
 }
+
+.splash-1 {
+  text-shadow: 2px 2px 5px #3c3c3c;;
+}
+
 
 .pure-g-1-5 {
   text-align: left;
@@ -210,40 +253,144 @@ text-align: center;
   border: transparent;
 }
 
-/* This is the subheading that appears on the blue section */
 .splash-subhead {
   letter-spacing: 0.05em;
   font-size: 2em;
-  opacity: 0.8;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-/*for the splash broder to be transparent*/
-.pure-group {
-  border: transparent;
+
+/*for the layout*/
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
 }
 
+#layout {
+  padding: 0;
+  margin-inline-start: auto;
+  color: #111;
+}
 
-/* This is the class used for the footer */
-.footer {
-  background: #111;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  height: auto;
+.header {
   text-align: center;
+  margin: 3em auto;
+}
+
+.sidebar {
+  background: rgb(61, 79, 93);
+  color: #fff;
+}
+
+.title {
+  font-size: 200%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(244, 250, 253);
+  padding-top: 20%;
+}
+.tagline {
+  font-size: 150%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(176, 202, 219);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+}
+
+.content-search{
+  text-align: center;
+  color: black;
+  width: 40%;
+  margin: auto;
+  position: absolute;
+  top: 20%; left: 0; bottom: 20%; right: 0;
+  text-align: center;
+  background-color: rgba(220, 220, 200, 0.5);
+  border-radius: 10px;
+}
+
+.post-title-1 {
+  font-size: 150%;
+}
+
+.content{
+  padding:10%;
+  background-color: rgba(220, 220, 200, 0.6);
+} 
+
+.content-1 {
+  background-color: rgba(220, 220, 200, 0.6);
+  padding-bottom: 30%;
+}
+
+.post {
+  padding-bottom: 4em;
+}
+.post-title {
+  font-size: 3em;
+  color: black;
+}
+
+.post-avatar {
+  border-radius: 50px;
+  float: right;
+  margin-left: 2em;
+}
+.post-description {
+  font-family: Georgia, "Cambria", serif;
+  color: black;
+  line-height: 1.5em;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 5%;
+}
+.post-meta {
+  color: black;
+  font-size: 90%;
+  margin: 0;
+}
+
+.post-images {
+  margin: 1em 0;
+}
+.post-image-meta {
+  margin-top: -3.5em;
+  margin-left: 1em;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
 }
 
 #login-container {
   text-align: center;
   color: #3c3c3c;
   width: 40%;
-  height: 60%;
   margin: auto;
-  margin-top: 50px;
+  padding-bottom: 10%;
   position: absolute;
-  top: 50px; left: 0; bottom: 0; right: 0;
+  top: 10%; left: 0; 
+  bottom: 20%; right: 0;
   text-align: center;
   background-color: white;
   border-radius: 10px;
@@ -253,14 +400,37 @@ text-align: center;
     text-align: center;
     color: #3c3c3c;
     width: 40%;
-    height: 75%;
     margin: auto;
-    margin-top: 50px;
     position: absolute;
-    top: 50px; left: 0; bottom: 0; right: 0;
+    top: 10%; left: 0; bottom: 20%; right: 0;
     text-align: center;
     background-color: white;
     border-radius: 10px;
+  }
+  /* This is the class used for the footer */
+.footer {
+  background: #111;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color:#ccc;
+  height: auto;
+  text-align: center;
+}
+.footer a {
+  color: #ccc;
+  font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus, 
+.footer .pure-menu-item-2 {
+  background: none;
+}
+
+.footer .pure-menu-item-2 {
+  list-style-type: none;
+  font-size: 80%;
+  float: right;
 }
 
 #review-container {
@@ -289,16 +459,230 @@ text-align: center;
     margin-bottom: 2%;
 }
 
+#profile-container {
+    background-color: white;
+    color: #111;
+    text-shadow: none;
+    top: 10px; left: 0; bottom: 0; right: 0;
+    border-radius: 10px;
+    padding: 0 15px;
+    width: 35%;
+    height: 60vh;
+}
+
+.profile-name {
+    color: #111;
+    text-shadow: none;
+    margin-top: 0;
+}
+
+.profile-att {
+    text-shadow: none;
+    display: flex;
+    line-height: 14px;
+}
+
+#profile-pic{
+    margin: 10px 0;
+    border-radius: 50%;
+}
+
+#signup-header {
+    margin-top: 20px;
+}
+
+#edit-container{
+  /* absolute center .splash within .splash-container */
+  width: 35%;
+  margin: auto;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  color: black;
+  text-shadow: none;
+  background-color: white;
+  height: 70vh;
+  border-radius: 10px;
+}
+
+.att-type{
+    margin: 0;
+    /* display: inline; */
+    padding-bottom: 20px;
+}
+
+.att-opt{
+    margin-left: 10px;
+}
+
+#updateProfile {
+    background-color: #228b22;
+}
+
+.quick-link {
+    padding: 8px;
+}
+
+#about{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.epb {
+    margin-top: 5px;
+}
+
+.epb a{    
+    font-size: 14px;
+    text-decoration: none;
+    color: #0000EE;
+}
+
+.epb a:hover{
+    text-decoration: underline;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.lr-btn{
+    height: 40px;
+    margin-top: 24px;
+}
+
+.search-pic{
+    border-radius: 50%;
+}
+
+.search-names {
+    letter-spacing: normal;
+}
+
 /* Media query for small mobile devices */
+
+@media screen and (min-width: 701px) and (max-width: 1100px) { 
+    #profile-container {
+        width: 50%;
+    }
+    .content-search {
+        width: 80%;
+    }
+    .search-container {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) { 
+    #edit-container {
+        width: 46%;
+    }
+    #profile-container {
+        width: 80%;
+    }
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 85%;
+    }
+    #login-container, #signup-container{
+        width: 60%;
+        top: 10%; left: 0; bottom: 10%; right: 0;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px) { 
+    #edit-container {
+        width: 55%;
+    }
+    #profile-container {
+        width: 80%;
+    }
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 85%;
+    }
+    #login-container, #signup-container{
+        width: 70%;
+        top: 10%; left: 0; bottom: 10%; right: 0;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 500px) { 
+    #edit-container {
+        width: 80%;
+    }
+    #profile-container {
+        width: 85%;
+    }
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 90%;
+    }
+    #login-container, #signup-container{
+        width: 88%;
+        top: 10%; left: 0; bottom: 10%; right: 0;
+    }
+}
+
 @media screen and (max-width: 39em) { 
     #review-container {
         width: 90%;
         top: 20%; left: 0; bottom: 10%; right: 0;
     }
-    /* #review-content {
-        width: 80%;
-    } */
+    #edit-container {
+        width: 95%;
+        height: 65vh;
+        top: 10%; left: 0; bottom: 0; right: 0;
+    }
+    #profile-container {
+        width: 90%;
+    }
+
+    .post-title-1 {
+      font-size: 1.5em;
+      letter-spacing: initial;
+    }
+
+    .search-container {
+        margin: 0;
+    }
+    .content-search {
+        width: 100%;
+        font-size: small;
+    }
+    .search-pic{
+        height: 70px;
+    }
+    .lr-btn {
+        font-size: 75%;
+    }
+    #login-container, #signup-container{
+        width: 90%;
+        top: 5%; left: 0; bottom: 10%; right: 0;
+    }
 }
+
+@media screen and (max-width: 333px) {
+    .search-pic{
+        height: 65px;
+    }
+    .lr-btn {
+        font-size: 65%;
+    }
+}
+
 /*
 * -- MOBILE (AND UP) MEDIA QUERIES --
 * On tablets and other medium-sized devices, we want to customize some
@@ -327,17 +711,40 @@ text-align: center;
       box-sizing: border-box;
   }
 
-  
+  .pure-button {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+
+  }
 
   .home-menu .pure-button-1 {
     float: left;
     margin-left: 95%;
   }
-  .home-menu .pure-menu-children  {
-    margin-left: 85%;
+ 
+  #h3 {
+    margin-top: 0;
   }
-}
 
+  .content-search {
+    width: 90%;
+    font-size: small;
+    letter-spacing: initial;
+  }
+
+  .post-title-1 {
+    font-size: 1.5em;
+    letter-spacing: initial;
+    margin: 10px;
+  }
+
+  .pure-input-rounded {
+    text-align: center;
+    float: left;
+  }
+
+}
 
 
 /*
@@ -369,7 +776,6 @@ text-align: center;
   }
   
   
-  
   /* We decrease the width of the .splash, since we have more width
   to work with */
   .splash {
@@ -392,7 +798,7 @@ text-align: center;
   }
   
 }
-@media screen and (min-width: 84em) {
+@media screen and (min-width: 78em) {
   /* We increase the header font size even more */
   .splash-head {
       font-size: 300%;
@@ -408,15 +814,5 @@ text-align: center;
  
 }
 
-@media screen and (min-width: 86em) {
 
-  .home-menu .pure-input-rounded {
-    width: 60%;
-  }
-
-  .home-menu .pure-button {
-    width: auto;
-    margin-right: 700px;
-  }
-}
 

@@ -51,11 +51,20 @@ module.exports = function (app) {
       let send = []
       data.forEach(element => {
         console.log(element.dataValues)
-        let person = {
-          id: element.dataValues.id,
-          name: element.dataValues.firstName + " " + element.dataValues.lastName,
-
-        };
+        let person;
+        if (element.dataValues.avatar != null){
+            person = {
+              id: element.dataValues.id,
+              name: element.dataValues.firstName + " " + element.dataValues.lastName,
+              avatar: element.dataValues.avatar
+            };
+        } else {
+            person = {
+                id: element.dataValues.id,
+                name: element.dataValues.firstName + " " + element.dataValues.lastName,
+                avatar: "../images/placeholder.png"
+              };
+        }
         send.push(person)
       });
       console.log(send)
@@ -64,16 +73,10 @@ module.exports = function (app) {
   })
 
   app.get("/profile", isAuthenticated, (req, res) => {
-    console.log(req.user);
-    let user = {
-      firstName: req.user.firstName,
-      lastName: req.user.lastName,
-      gender: req.user.gender,
-      pets: req.user.pets,
-      children: req.user.children,
-      job: req.user.job,
-      avatar: req.user.avatar
-    }
+        let user = {
+          firstName: req.user.firstName,
+          lastName: req.user.lastName,
+        }
     res.render("profile", user);
   })
 
@@ -94,9 +97,9 @@ module.exports = function (app) {
   })
 
   app.get("/reviews/:id", isAuthenticated, (req, res) => {
-    db.sequelize.query(`SELECT review, stars, concat(a.firstName ,' ', a.lastName) as 'reviwee', concat(b.firstName, ' ', b.lastName) as 'reviwer' from reviews left join users a on reviewed_id = a.id left join users b on reviewer_id = b.id where reviewed_id = "${req.params.id}" `)
+    db.sequelize.query(`SELECT review, stars, concat(a.firstName ,' ', a.lastName) as 'reviewee', concat(b.firstName, ' ', b.lastName) as 'reviewer' from reviews left join users a on reviewed_id = a.id left join users b on reviewer_id = b.id where reviewed_id = "${req.params.id}" `)
       .then(function (dbReviews) {
-        res.render("viewReviews",{review : dbReviews[0], reviwee : dbReviews[0][0].reviwee});
+        res.render("viewReviews",{review : dbReviews[0], reviwee : dbReviews[0][0].reviewee});
       })
   })
 
