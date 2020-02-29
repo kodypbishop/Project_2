@@ -16,7 +16,7 @@ $(document).ready(function(){
             reviewer: $(this).data("reviewer"),
             stars: $("input[name='star']:checked").val()
         }
-
+           
         $.post("/api/review_data", newReview, function(){
 
         })
