@@ -11,6 +11,7 @@ $(document).ready(function () {
         $("#profile-pets").text(updatedData.pets);
         $("#profile-children").text(updatedData.children);
         $("#profile-job").text(updatedData.job);
+        $("#profile-pic").attr("src", updatedData.avatar);
     });
   }
 

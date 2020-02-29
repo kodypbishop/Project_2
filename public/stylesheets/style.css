@@ -8,15 +8,9 @@ h3 {
   font-weight: 300;
 }
 
-<<<<<<< HEAD
 #search-header{
     font-size: 250%;
     color: black;
-=======
-h4 {
-  font-size: 250%;
-  color: black;
->>>>>>> d58c422c62646a004cb08410968db1a3936d5bc4
 }
 
 * {
@@ -248,7 +242,7 @@ text-align: center;
 
 .splash-subhead {
   letter-spacing: 0.05em;
-  font-size: 2em;8;
+  font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
