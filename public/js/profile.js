@@ -11,7 +11,13 @@ $(document).ready(function () {
         $("#profile-pets").text(updatedData.pets);
         $("#profile-children").text(updatedData.children);
         $("#profile-job").text(updatedData.job);
-        $("#profile-pic").attr("src", updatedData.avatar);
+
+        if (updatedData.avatar != null){
+            $("#profile-pic").attr("src", updatedData.avatar);
+        } else {
+            $("#profile-pic").attr("src", "/images/placeholder.png");
+        }
+
     });
   }
 
