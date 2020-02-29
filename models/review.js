@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     var reviews = sequelize.define('reviews', {
 
-        Stars_id: {
+        stars: {
             type: DataTypes.INTEGER,
         },
         review: {
