@@ -666,11 +666,20 @@ text-align: center;
         height: 70px;
     }
     .lr-btn {
-        font-size: 80%;
+        font-size: 75%;
     }
     #login-container, #signup-container{
         width: 90%;
         top: 5%; left: 0; bottom: 10%; right: 0;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    .search-pic{
+        height: 65px;
+    }
+    .lr-btn {
+        font-size: 65%;
     }
 }
 
@@ -713,9 +722,11 @@ text-align: center;
     float: left;
     margin-left: 95%;
   }
-  .home-menu .pure-menu-children  {
-    /* margin-left: 85%; */
+ 
+  #h3 {
+    margin-top: 0;
   }
+
   .content-search {
     width: 90%;
     font-size: small;
