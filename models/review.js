@@ -1,10 +1,19 @@
 module.exports = function (sequelize, DataTypes) {
     var reviews = sequelize.define('reviews', {
 
+<<<<<<< HEAD
+        stars: {
+            type: DataTypes.INTEGER,
+        },
+        review: {
+            type: DataTypes.TEXT
+        },
+=======
         stars: DataTypes.INTEGER,
 
         review: DataTypes.TEXT
         
+>>>>>>> d58c422c62646a004cb08410968db1a3936d5bc4
       
 
     })

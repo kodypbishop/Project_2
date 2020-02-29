@@ -2,15 +2,23 @@
 h2 {
   margin-top: 20%;
 }
+
 h3 {
   margin-top: 50%;
   font-weight: 300;
 }
 
+<<<<<<< HEAD
+#search-header{
+    font-size: 250%;
+    color: black;
+=======
 h4 {
   font-size: 250%;
   color: black;
+>>>>>>> d58c422c62646a004cb08410968db1a3936d5bc4
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
