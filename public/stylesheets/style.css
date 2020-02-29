@@ -713,9 +713,11 @@ text-align: center;
     float: left;
     margin-left: 95%;
   }
-  .home-menu .pure-menu-children  {
-    /* margin-left: 85%; */
+ 
+  #h3 {
+    margin-top: 0;
   }
+
   .content-search {
     width: 90%;
     font-size: small;
