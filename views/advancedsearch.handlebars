@@ -1,0 +1,68 @@
+<link href="stylesheets/style.css" rel="stylesheet">
+<title>Search Ratings</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="/members">Rate Your Roommate</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <form class="pure-form">
+                        <div class="search">
+                            <input type="text" placeholder="Search..." id="searchBar">
+                            <span class="fa fa-search" id="submitSearch"></span>
+                        </div>
+                    </form>
+                </li>
+                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                    <a href="#" id="menuLink1" class="pure-menu-link"><button class="pure-button-1"> <i
+                                class="fa fa-cog"></i></button></a>
+                    <ul class="pure-menu-children">
+                        <li class="pure-menu-item"><a href="/advancedsearch"
+                                class="pure-menu-link quick-link">Search</a></li>
+                        <li class="pure-menu-item"><a href="/profile" class="pure-menu-link quick-link">View Profile</a>
+                        </li>
+                        <li class="pure-menu-item"><a href="/edit-profile" class="pure-menu-link quick-link">Edit
+                                Profile</a></li>
+                        <li class="pure-menu-item"> <a href="/logout" class="pure-menu-link quick-link"> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<div class="container-3">
+    <div class="pure-g">
+        <div class="content-search pure-u-md-1-2">
+            <div class="header"><h4 id="search-header">Search Options</h4>
+                    <div class="posts">
+                        <section class="post">
+                            <header class="post-header">
+                                <h5 class="post-title-1">Search By Email</h5>
+                                <form class="pure-form">
+                                    <input type="email" id="email" class="pure-input-rounded" placeholder="search by email">
+                                    <button type="submit" id="submitEmail" class="pure-button pure-button-primary"> Submit </button>
+                                </form>
+                            </header>
+                            <header class="post-header">
+                                <h5 class="post-title-1">Search By Name</h5>
+                                <form class="pure-form">
+                                    <input type="text" id="firstName" class="pure-input-rounded" placeholder="First Name">
+                                    <input type="text" id="lastName" class="pure-input-rounded" placeholder="Last Name">
+                                    <button type="submit" id="submitName" class="pure-button pure-button-primary"> Submit </button>
+                                </form>
+                            </header>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/advancedsearch.js"></script>
+    <script type="text/javascript" src="js/searchbar.js"></script>

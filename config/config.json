@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "null",
+    "password": "Jang0f3tt",
     "database": "roommates_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "null",
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "zd3lna1313nsqpe0",
+    "password": "ybk739b2kubigovs",
+    "database": "ac1ihq4q8z0h8x26",
+    "host": "kil9uzd3tgem3naa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
