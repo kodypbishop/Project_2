@@ -666,11 +666,20 @@ text-align: center;
         height: 70px;
     }
     .lr-btn {
-        font-size: 80%;
+        font-size: 75%;
     }
     #login-container, #signup-container{
         width: 90%;
         top: 5%; left: 0; bottom: 10%; right: 0;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    .search-pic{
+        height: 65px;
+    }
+    .lr-btn {
+        font-size: 65%;
     }
 }
 
