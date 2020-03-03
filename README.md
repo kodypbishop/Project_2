@@ -16,7 +16,7 @@ To launch the app on Heroku,
 5. After clicking on submit, the user will be brought back to the searched page. If the user clicks on the Read Review section, the review will show there. 
 
 ## Demo 
-[Recording of Rate My Roommate](demo/rate_roommies_demo.gif)
+[Recording of Rate My Roommate](demo/demo.gif)
 
 ## Built With 
 1. JavaScript
